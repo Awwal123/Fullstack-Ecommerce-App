@@ -19,13 +19,14 @@ export const Navbar = () => {
           onClick={() => setIsNavOpen(false)}
         ></div>
 
-        <div className="flex justify-between items-center w-full md:w-auto">
-          <h1 className="font-bold text-2xl">Exclusive</h1>
+        <div className="flex  gap-4 items-center w-full md:w-auto">
           <img
-            src={isNavOpen ? Closebtn : Hamburger}
+            src={Hamburger}
             className="w-10 block md:hidden h-10 cursor-pointer"
             onClick={toggleNavbar}
           />
+
+          <h1 className="font-bold text-2xl">Exclusive</h1>
         </div>
 
         <div className="hidden md:flex justify-between gap-7">
@@ -58,11 +59,20 @@ export const Navbar = () => {
 
         {/* Navbar for small screens */}
         <div
-          className={`fixed top-0 left-0 w-full bg-gray-500 z-20 h-1/2 transform transition-transform ${
-            isNavOpen ? "translate-y-0" : "-translate-y-full"
+          className={`fixed top-0 left-0 h-full p-8 bg-black z-20 w-[70%] transform transition-transform ${
+            isNavOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <div className="flex flex-col items-center justify-center h-full">
+          <div className="flex justify-between">
+          <h1 className="font-bold text-white text-2xl">Exclusive</h1>
+            <img
+              src={Closebtn}
+              alt="l"
+              className="w-6 h-6"
+              onClick={() => setIsNavOpen(false)}
+            />
+          </div>
+          <div className="flex flex-col mt-6 h-full">
             <p className="text-white text-lg py-2">Home</p>
             <p className="text-white text-lg py-2">Contact</p>
             <p className="text-white text-lg py-2">About</p>
