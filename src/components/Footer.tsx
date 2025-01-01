@@ -1,4 +1,4 @@
-import Send from "../assets/images/Send-icon.png";
+// import Send from "../assets/images/Send-icon.png";
 import QrCode from "../assets/images/QrCode.jpg";
 import Google from "../assets/images/GooglePlay.png";
 import AppStore from "../assets/images/AppStore.png";
@@ -36,18 +36,18 @@ export const Footer = () => {
             <p className="text-gray-400 text-base">
               Get 10% off your first order
             </p>
-            <div className="relative inline-block">
+            {/* <div className="relative inline-block">
               <input
                 type="text"
                 placeholder="Enter your email"
-                className="border border-white w-[217px] h-11 bg-black px-2 rounded-sm text-gray-300 "
+                className="border border-white w-auto h-11 bg-black px-2 rounded-sm text-gray-300 "
               />
               <img
                 src={Send}
                 alt="s"
                 className="absolute right-1/4 top-1/2 transform -translate-y-1/2 w-5 h-5"
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col gap-3">
