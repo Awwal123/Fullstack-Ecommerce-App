@@ -28,7 +28,7 @@ export const Footer = () => {
         </div>
       </div> */}
 
-      <div className="w-full text-white px-5 py-3 hidden md:block md:px-16 md:h-auto md:py-10 bg-black">
+      <div className="w-full mt-16 text-white px-5 py-3 hidden md:block md:px-16 md:h-auto md:py-10 bg-black">
         <div className="grid grid-cols-5 gap-4">
           <div className="flex flex-col gap-3">
             <h3 className="text-2xl font-bold">Exclusive</h3>
