@@ -34,7 +34,7 @@ const Timer: React.FC<TimerProps> = ({ duration }) => {
   const { days, hours, minutes, seconds } = getFormattedTime(time);
 
   return (
-    <div className="font-bold text-3xl flex gap-4">
+    <div className="font-bold md:text-3xl flex gap-4">
       <span className="days">{days}</span>
       <span className="colon">:</span>
       <span className="hours">{hours}</span>

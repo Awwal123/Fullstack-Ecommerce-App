@@ -38,9 +38,9 @@ export const HeroSection = () => {
               </form>
 
               <div className="flex flex-col gap-5">
-                <button className="border-none w-[90vw] rounded-md bg-[#DB4444] hover:bg-[#E07575] text-white text-center cursor-pointer  md:w-[371px] h-[56px]">
+           <Link to={"/home"}>    <button className="border-none w-[90vw] rounded-md bg-[#DB4444] hover:bg-[#E07575] text-white text-center cursor-pointer  md:w-[371px] h-[56px]">
                   Create Account
-                </button>
+                </button></Link> 
 
                 <div className="flex w-[90vw]  gap-5 justify-center items-center border-2 hover:bg-gray-100 hover:text-gray-400 border-black  rounded-md bg-white  text-center cursor-pointer  md:w-[371px] h-[56px]">
                   <img src={BtnImg} alt="" />

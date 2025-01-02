@@ -1,4 +1,3 @@
-// import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
 import { Navbar } from "./Navbar";
 

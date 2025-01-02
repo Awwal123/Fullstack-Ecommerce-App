@@ -6,6 +6,7 @@ import { SignUp } from "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+ 
   return (
     <>
       <div>
@@ -15,7 +16,7 @@ function App() {
             <Route path="/" element={<SignUp />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/exclusive" element={<Exclusive />} />
+            <Route path="/home" element={<Exclusive />} />
           </Routes>
           <Footer />
         </Router>

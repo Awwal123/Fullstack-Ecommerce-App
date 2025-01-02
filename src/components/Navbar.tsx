@@ -1,13 +1,20 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation
 import Magnify from "../assets/images/Magnify.png";
 import Hamburger from "../assets/images/hamburger.png";
 import Closebtn from "../assets/images/CloseIcon.png";
 
 export const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation(); // Get the current location
+  const { pathname } = location;
+
   const toggleNavbar = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  const isActive = (path: string) =>
+    pathname === path ? "border-b-2 border-gray-500" : ""; // Apply class conditionally
 
   return (
     <div>
@@ -30,16 +37,32 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:flex justify-between gap-7">
-          <p className="text-base font-normal cursor-pointer hover:text-gray-400">
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/home"
+            )}`}
+          >
             Home
           </p>
-          <p className="text-base font-normal cursor-pointer hover:text-gray-400">
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/contact"
+            )}`}
+          >
             Contact
           </p>
-          <p className="text-base font-normal cursor-pointer hover:text-gray-400">
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/about"
+            )}`}
+          >
             About
           </p>
-          <p className="text-base font-normal cursor-pointer hover:text-gray-400">
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/signup"
+            )}`}
+          >
             SignUp
           </p>
         </div>
@@ -64,7 +87,7 @@ export const Navbar = () => {
           }`}
         >
           <div className="flex justify-between">
-          <h1 className="font-bold text-white text-2xl">Exclusive</h1>
+            <h1 className="font-bold text-white text-2xl">Exclusive</h1>
             <img
               src={Closebtn}
               alt="l"
@@ -73,10 +96,26 @@ export const Navbar = () => {
             />
           </div>
           <div className="flex flex-col mt-6 h-full">
-            <p className="text-white text-lg py-2">Home</p>
-            <p className="text-white text-lg py-2">Contact</p>
-            <p className="text-white text-lg py-2">About</p>
-            <p className="text-white text-lg py-2">SignUp</p>
+            <p
+              className={`text-white text-lg py-2 ${isActive("/home")}`}
+            >
+              Home
+            </p>
+            <p
+              className={`text-white text-lg py-2 ${isActive("/contact")}`}
+            >
+              Contact
+            </p>
+            <p
+              className={`text-white text-lg py-2 ${isActive("/about")}`}
+            >
+              About
+            </p>
+            <p
+              className={`text-white text-lg py-2 ${isActive("/signup")}`}
+            >
+              SignUp
+            </p>
           </div>
         </div>
       </div>

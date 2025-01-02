@@ -72,12 +72,12 @@ export function Slider() {
             {/* end */}
           
           {/* manual navigation */}
-          <div className="navigation-manual">
+          {/* <div className="navigation-manual">
             <label htmlFor="radio1" className="manual-btn"></label>
             <label htmlFor="radio2" className="manual-btn"></label>
             <label htmlFor="radio3" className="manual-btn"></label>
             <label htmlFor="radio4" className="manual-btn"></label>
-          </div>
+          </div> */}
       </div>
       </div>
       </div>

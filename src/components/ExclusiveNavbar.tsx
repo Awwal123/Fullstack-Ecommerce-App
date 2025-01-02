@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Magnify from "../assets/images/Magnify.png";
 import Hamburger from "../assets/images/hamburger.png";
 import Closebtn from "../assets/images/CloseIcon.png";
@@ -14,6 +15,8 @@ import Review from "../assets/images/Reviews.png"
 export const ExclusiveNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
+  const location = useLocation();
+  const { pathname } = location;
   const toggleNavbar = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -22,7 +25,8 @@ export const ExclusiveNavbar = () => {
     setIsDropDownOpen((prevState) => !prevState);
   };
 
-  // Usage:
+  const isActive = (path: string) =>
+    pathname === path ? "border-b-2 border-gray-500" : ""; 
 
   return (
     <div>
@@ -41,19 +45,42 @@ export const ExclusiveNavbar = () => {
         <h1 className="font-bold text-2xl">Exclusive</h1>
       </div>
   
-      <div className="hidden md:flex justify-between gap-7">
-        <p className="text-base font-normal cursor-pointer hover:text-gray-400">
-          Home
-        </p>
-        <p className="text-base font-normal cursor-pointer hover:text-gray-400">
-          Contact
-        </p>
-        <p className="text-base font-normal cursor-pointer hover:text-gray-400">
-          About
-        </p>
-        <p className="text-base font-normal cursor-pointer hover:text-gray-400">
-          SignUp
-        </p>
+      <div className="hidden md:flex items-center  justify-between gap-7">
+      <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/home"
+            )}`}
+          >
+            Home
+          </p>
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/contact"
+            )}`}
+          >
+            Contact
+          </p>
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/shop"
+            )}`}
+          >
+            Shop
+          </p>
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/about"
+            )}`}
+          >
+            About
+          </p>
+          <p
+            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+              "/signup"
+            )}`}
+          >
+            SignUp
+          </p>
       </div>
   
       <div className="flex gap-3 ">
@@ -134,6 +161,7 @@ export const ExclusiveNavbar = () => {
       </div>
   
       {/* Navbar for small screens */}
+    {/* dont do anything for this, don't touch it  */}
       <div
         className={`fixed top-0 left-0 h-full p-8 bg-black z-20 w-[70%] transform transition-transform ${
           isNavOpen ? "translate-x-0" : "-translate-x-full"
