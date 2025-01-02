@@ -15,7 +15,7 @@ function App() {
             <Route path="/" element={<SignUp />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
-            <Route path="exclusive" element={<Exclusive />} />
+            <Route path="/exclusive" element={<Exclusive />} />
           </Routes>
           <Footer />
         </Router>
