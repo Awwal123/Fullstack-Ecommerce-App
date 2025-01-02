@@ -97,7 +97,7 @@ export const ExclusiveNavbar = () => {
               onClick={toggleDropDown}
             />
             {isDropDownOpen && (
-              <div className="absolute top-full text-white text-sm justify-between right-2 w-[225px] h-[208px] bg-[#0000000A] flex flex-col gap-9 p-3 transition-transform duration-300">
+              <div className="absolute top-full text-white text-sm justify-between right-2 w-[225px] h-[208px] bg-gray-600 z-50 rounded-lg flex flex-col gap-9 p-3 transition-transform duration-300">
                 <div className="flex gap-2 ">
                   <img src={use} alt="" />
                   <p>Manage My Account</p>

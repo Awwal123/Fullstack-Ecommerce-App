@@ -1,11 +1,13 @@
 import { ExclusiveNavbar } from "./ExclusiveNavbar"
+import { Slider } from "./Slider"
 
 export const Exclusive = () => {
     return (
         <>
        <ExclusiveNavbar />
+       <Slider />
         <div>
-            <h1>Exclusive</h1>
+          
         </div>
         </>
     )
