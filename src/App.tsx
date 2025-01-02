@@ -6,6 +6,7 @@ import { Login } from "./components/Login";
 import { SignUp } from "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
+import { Cart } from "./components/Cart";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                 // </PrivateRoute>
               }
             />
+            <Route path="/cart"  element={<Cart />} />
           </Routes>
           <ToastContainer position="bottom-left" />
           <Footer />

@@ -14,7 +14,7 @@ export const Navbar = () => {
   };
 
   const isActive = (path: string) =>
-    pathname === path ? "border-b-2 border-gray-500" : ""; // Apply class conditionally
+    pathname === path ? "border-b-2 border-gray-500" : ""; 
 
   return (
     <div>

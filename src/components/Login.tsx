@@ -135,7 +135,7 @@ import { useState } from "react";
         navigate("/home");
       } catch (err) {
         if (err instanceof FirebaseError) {
-          toast.error(err.message);
+          console.error(err.message);
         } else {
           toast.error("An unexpected error occurred. Please try again.");
         }
