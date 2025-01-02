@@ -1,4 +1,5 @@
 import { ExclusiveNavbar } from "./ExclusiveNavbar"
+import { FlashSale } from "./FlashSales"
 import { Slider } from "./Slider"
 
 export const Exclusive = () => {
@@ -6,6 +7,7 @@ export const Exclusive = () => {
         <>
        <ExclusiveNavbar />
        <Slider />
+       <FlashSale />
         <div>
           
         </div>

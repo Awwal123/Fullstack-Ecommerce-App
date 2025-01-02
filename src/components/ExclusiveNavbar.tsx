@@ -8,6 +8,8 @@ import User from "../assets/images/User.png";
 import Mall from "../assets/images/mallbag.png"
 import use from "../assets/images/use.png"
 import logout from "../assets/images/logout.png"
+import Cancel from "../assets/images/cancel.png"
+import Review from "../assets/images/Reviews.png"
 
 export const ExclusiveNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -97,18 +99,32 @@ export const ExclusiveNavbar = () => {
               onClick={toggleDropDown}
             />
             {isDropDownOpen && (
-              <div className="absolute top-full text-white text-sm justify-between right-2 w-[225px] h-[208px] bg-gray-600 z-50 rounded-lg flex flex-col gap-9 p-3 transition-transform duration-300">
-                <div className="flex gap-2 ">
-                  <img src={use} alt="" />
+              <div className="absolute top-full text-white text-sm justify-between right-2 w-[225px] h-[208px] bg-slate-500 z-50 rounded-lg flex flex-col px-2 py-1 mt-4 transition-transform duration-300">
+                <div className="flex justify-between">
+                    <p></p>
+                    <img src={Closebtn} alt="" className="w-5 h-5 cursor-pointer" onClick={toggleDropDown} />
+                </div>
+                <div className="flex items-center cursor-pointer gap-2 ">
+                  <img src={use} alt="" className="w-7 h-7" />
                   <p>Manage My Account</p>
                 </div>
   
-                <div className="flex gap-2 ">
-                  <img src={Mall} alt="" />
+                <div className="flex items-center cursor-pointer gap-2 ">
+                  <img src={Mall} alt="" className="w-5 h-5"/>
                   <p>My Order</p>
                 </div>
-                <div className="flex gap-2 ">
-                  <img src={logout} alt="" />
+
+                <div className="flex items-center cursor-pointer gap-2 ">
+                  <img src={Cancel} alt="" className="w-5 h-5"/>
+                  <p>My Cancellations</p>
+                </div>
+
+                <div className="flex items-center cursor-pointer gap-2 ">
+                  <img src={Review} alt="" className="w-5 h-5"/>
+                  <p>My Reviews</p>
+                </div>
+                <div className="flex items-center cursor-pointer gap-2 ">
+                  <img src={logout} alt="" className="w-7 h-7" />
                   <p>Logout</p>
                 </div>
               </div>

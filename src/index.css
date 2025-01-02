@@ -141,6 +141,10 @@ body {
   #radio4:checked ~ .navigation-auto .auto-btn4 {
     background-color: #ecececd9;
   }
+  
+  .colon {
+    color: #e07575;
+  }
 
   @media (max-width: 767px) {
     .slide-img {
