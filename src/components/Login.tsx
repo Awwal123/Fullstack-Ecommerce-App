@@ -1,13 +1,13 @@
 import AuthBG from "../assets/images/SideImage.png";
 import BtnImg from "../assets/images/Google.png";
-import { Header } from "./Header";
+// import { Header } from "./Header";
 import { Navbar } from "./Navbar";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 export const Login = () => {
   return (
     <>
-      <Header />
+     
       <Navbar />
       <Fade direction="up" duration={2000} triggerOnce>
         <div className="w-full  mb-3 h-screen  md:pl-0   flex justify-between flex-col  md:flex-row  md:py-10 md:pr-16">
