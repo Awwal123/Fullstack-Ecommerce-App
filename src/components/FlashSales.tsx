@@ -167,7 +167,7 @@ export const FlashSale = () => {
               <div className="flex justify-center items-center ">
                 <img
                   src={product.imgUrl}
-                  className=" w-[170px]   md:w-[68%] md:h-auto"
+                  className=" w-[170px]   md:w-[190px] md:h-[180px]"
                   alt={product.imgUrl}
                 />
               </div>
@@ -217,8 +217,6 @@ export const FlashSale = () => {
       </Link>
 
       <hr className="border my-9 md:mt-11" />
-
-      
     </div>
   );
 };
