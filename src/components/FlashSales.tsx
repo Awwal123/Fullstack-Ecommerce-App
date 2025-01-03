@@ -1,6 +1,6 @@
 import Timer from "./Timer";
 import Favorite from "../assets/images/Favorite.png";
-import Eye from "../assets/images/eye.png";
+// import Eye from "../assets/images/eye.png";
 import Pad from "../assets/images/WiredPad.png";
 import Keyboard from "../assets/images/WiredKeyboard.png";
 import Monitor from "../assets/images/GamingMonitor.png";
