@@ -5,6 +5,7 @@ import { FlashSale } from "./FlashSales"
 import { JamBoxAdvert } from "./JamBoxAdvert"
 import { NewArrival } from "./NewArrival"
 import { Slider } from "./Slider"
+import { WhyChooseUs } from "./WhyChooseUs"
 
 export const Exclusive = () => {
     return (
@@ -16,6 +17,7 @@ export const Exclusive = () => {
        <JamBoxAdvert />
        <ExploreOurProduct />
        <NewArrival />
+       <WhyChooseUs />
         <div>
           
         </div>
