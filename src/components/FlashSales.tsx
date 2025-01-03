@@ -14,6 +14,7 @@ import five from "../assets/images/FiveStar.png";
 import fourHalf from "../assets/images/FourHalfStar.png";
 import four from "../assets/images/FourStar.png";
 import { useCart } from "./CartContext";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -208,9 +209,12 @@ export const FlashSale = () => {
           </div>
         ))}
       </div>
-      <div className="mx-auto my-7 flex justify-center items-center rounded-md bg-[#DB4444] hover:bg-[#E07575] text-white text-center cursor-pointer  w-[243px] h-[56px]">
-        View All Products
-      </div>
+      <Link to={"/shop"}>
+        {" "}
+        <div className="mx-auto my-7 flex justify-center items-center rounded-md bg-[#DB4444] hover:bg-[#E07575] text-white text-center cursor-pointer  w-[243px] h-[56px]">
+          View All Products
+        </div>
+      </Link>
     </div>
   );
 };

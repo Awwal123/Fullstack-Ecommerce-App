@@ -7,6 +7,7 @@ import { SignUp } from "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
 import { Cart } from "./components/Cart";
+import { Shop } from "./components/Shop";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               }
             />
             <Route path="/cart"  element={<Cart />} />
+            <Route path="/shop" element= {<Shop />} />
           </Routes>
           <ToastContainer position="bottom-left" />
           <Footer />

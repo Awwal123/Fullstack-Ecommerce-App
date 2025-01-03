@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Magnify from "../assets/images/Magnify.png";
 import Hamburger from "../assets/images/hamburger.png";
 import Closebtn from "../assets/images/CloseIcon.png";
-import WishList from "../assets/images/Wishlist.png";
+// import WishList from "../assets/images/Wishlist.png";
 import Cart from "../assets/images/Cart.png";
 import User from "../assets/images/User.png";
 import Mall from "../assets/images/mallbag.png";
@@ -52,13 +52,13 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
         </div>
 
         <div className="hidden md:flex items-center  justify-between gap-7">
-          <p
+          <Link to={"/home"}><p
             className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
               "/home"
             )}`}
           >
             Home
-          </p>
+          </p></Link> 
           <p
             className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
               "/contact"
@@ -103,7 +103,7 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
             />
           </div>
           <div className="flex justify-center items-center gap-3">
-            <div className="relative">
+            {/* <div className="relative">
               <img
                 src={WishList}
                 alt="w"
@@ -112,7 +112,7 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
               <p className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/3 w-4 h-4 cursor-pointer text-center text-xs bg-[#DB4444] text-white rounded-full">
                 2
               </p>
-            </div>
+            </div> */}
             <Link to={"/cart"}>
               {" "}
               <div className="relative">
