@@ -19,7 +19,7 @@ export function Slider() {
       }
 
       setCounter((prevCounter) => (prevCounter >= 4 ? 1 : prevCounter + 1));
-    }, 4000);
+    }, 3000);
 
     
     return () => clearInterval(interval);

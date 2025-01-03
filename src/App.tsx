@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
 import { Cart } from "./components/Cart";
 import { Shop } from "./components/Shop";
+import { BestSelling } from "./components/BestSelling";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             />
             <Route path="/cart"  element={<Cart />} />
             <Route path="/shop" element= {<Shop />} />
+            <Route path="/best-selling" element= {<BestSelling />} />
           </Routes>
           <ToastContainer position="bottom-left" />
           <Footer />

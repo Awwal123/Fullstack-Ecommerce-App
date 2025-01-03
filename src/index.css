@@ -70,24 +70,25 @@ body {
   .navigation-manual {
     position: absolute;
     width: 800px;
-    margin-top: -180px;
+    margin-top: -40px;
     display: flex;
     gap: 4px;
     z-index: 10;
     justify-content: center;
+    align-items: center;
   }
   .manual-btn {
     z-index: 10;
-    background-color: #ecececd9;
+    background-color: orangered;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 1s;
+    transition: 2s;
   }
-  /* .manual-btn:hover {
-    border: 2px solid #ffffff;
+  .manual-btn:hover {
+    border: 2px solid red;
     
-  } */
+  }
   .product-alignment {
     display: flex;
     flex-direction: column;

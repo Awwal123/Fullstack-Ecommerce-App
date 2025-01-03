@@ -139,13 +139,13 @@ export const FlashSale = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-auto overflow-y-auto gap-12 md:grid md:grid-cols md:grid-cols-4 md:gap-4 ">
+      <div className="flex w-auto overflow-y-auto gap-12 md:grid md:grid-cols md:grid-cols-4 md:gap-9 ">
         {products.map((product) => (
           <div
             key={product.id}
-            className="w-[190px]  md:w-[270px] md:h-auto bg-white pb-2 rounded-md shadow-sm"
+            className="w-[190px]  md:w-auto md:h-auto bg-white pb-2 rounded-md shadow-sm"
           >
-            <div className="relative group cursor-pointer bg-gray-100 w-[190px] md:w-[270px] flex flex-col items-center rounded-t-md pt-3 md:h-[250px] h-[250px]">
+            <div className="relative group cursor-pointer bg-gray-100 w-[190px] md:w-auto flex flex-col items-center rounded-t-md pt-3 md:h-[250px] h-[250px]">
               {/* Discount Badge */}
               <div className="px-3 flex w-full justify-between">
                 <div className="bg-[#DB4444] w-[55px] h-[26px] rounded-md text-xs flex items-center justify-center text-white">
@@ -158,9 +158,9 @@ export const FlashSale = () => {
                 <div className="flex justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
                   <img src={Favorite} alt="favorite" />
                 </div>
-                <div className="md:flex hidden justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
+                {/* <div className="md:flex hidden justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
                   <img src={Eye} alt="eye" />
-                </div>
+                </div> */}
               </div>
 
               {/* Product Image */}
@@ -215,6 +215,10 @@ export const FlashSale = () => {
           View All Products
         </div>
       </Link>
+
+      <hr className="border my-9 md:mt-11" />
+
+      
     </div>
   );
 };
