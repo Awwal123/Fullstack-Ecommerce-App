@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { toast } from "react-toastify";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-import { db } from "../components/config/firebase";
+import { db } from "./config/firebase"; // Adjust the import path based on your project structure
 
 // Defines the structure of cart items
 interface CartItem {
@@ -46,7 +46,11 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const userId = localStorage.getItem("userUID"); // Retrieve user ID from localStorage or your auth context
 
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
   const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>(() => {
     const savedWishlist = localStorage.getItem("wishlistItems");
     return savedWishlist ? JSON.parse(savedWishlist) : [];
@@ -110,6 +114,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       }
       toast.success(`${product.name} added to cart!`);
       return [...prev, { ...product, quantity: 1 }];
+      
     });
   };
 

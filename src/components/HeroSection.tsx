@@ -53,7 +53,7 @@ export const HeroSection = () => {
       await saveToFirestore(user.uid, {
         name,
         email,
-        cart: [{}],
+        cart: [],
         orders: [],
         wishlist: [],
       });

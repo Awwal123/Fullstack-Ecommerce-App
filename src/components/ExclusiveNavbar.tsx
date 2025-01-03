@@ -11,6 +11,7 @@ import use from "../assets/images/use.png";
 import logout from "../assets/images/logout.png";
 import Cancel from "../assets/images/cancel.png";
 import Review from "../assets/images/Reviews.png";
+import { useCart } from "./CartContext"; 
 
 export const ExclusiveNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -24,6 +25,9 @@ export const ExclusiveNavbar = () => {
   const toggleDropDown = () => {
     setIsDropDownOpen((prevState) => !prevState);
   };
+  const { cartItems } = useCart();
+ 
+const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const isActive = (path: string) =>
     pathname === path ? "border-b-2 border-gray-500" : "";
@@ -118,7 +122,7 @@ export const ExclusiveNavbar = () => {
                   className="w-6 h-6 cursor-pointer"
                 />
                 <p className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/3 cursor-pointer w-4 h-4 text-center text-xs bg-[#DB4444] text-white rounded-full">
-                  7
+                  {totalCartItems}
                 </p>
               </div>
             </Link>

@@ -13,6 +13,7 @@ import Laptop from "../assets/images/GamingLaptop.png";
 import five from "../assets/images/FiveStar.png";
 import fourHalf from "../assets/images/FourHalfStar.png";
 import four from "../assets/images/FourStar.png";
+import { useCart } from "./CartContext";
 
 const products = [
   {
@@ -108,6 +109,7 @@ const products = [
 ];
 
 export const FlashSale = () => {
+  const { addToCart } = useCart();
   const getRatingImage = (rating: number) => {
     if (rating === 5) return five;
     if (rating === 4.5) return fourHalf;
@@ -171,7 +173,18 @@ export const FlashSale = () => {
 
               {/* Add to Cart Button (Hidden by Default) */}
               <div className="w-full mt-auto">
-                <button className="bg-black w-full py-2 rounded-b-md text-white md:opacity-0 group-hover:opacity-100 transition-opacity">
+                <button
+                  className="bg-black w-full py-2 rounded-b-md text-white md:opacity-0 group-hover:opacity-100 transition-opacity"
+                  onClick={() =>
+                    addToCart({
+                      id: product.id,
+                      name: product.name,
+                      price: product.price,
+                      quantity: 1, // Default to 1 when adding to cart
+                      imgUrl: product.imgUrl,
+                    })
+                  }
+                >
                   Add To Cart
                 </button>
               </div>
