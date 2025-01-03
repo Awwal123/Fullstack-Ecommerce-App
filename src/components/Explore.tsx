@@ -1,4 +1,4 @@
-import Iphonex from "../assets/images/Iphonex.png";
+import Iphonex from "../assets/images/IphoneX.png";
 import GucciHandbag from "../assets/images/curology.png";
 import SilverRolex from "../assets/images/SilverRolex.png";
 import VIP2 from "../assets/images/VIP2.png";

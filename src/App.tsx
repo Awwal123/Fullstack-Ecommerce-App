@@ -9,6 +9,7 @@ import { CartProvider } from "./components/CartContext";
 import { Cart } from "./components/Cart";
 import { Shop } from "./components/Shop";
 import { BestSelling } from "./components/BestSelling";
+import { ExploreOurProduct } from "./components/Explore";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -16,31 +17,31 @@ function App() {
     <>
       <div>
         <Header />
-        
-        <Router>
-        <CartProvider>
-          <Routes>
-            <Route path="/" element={<SignUp />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/login" element={<Login />} />
 
-            <Route
-              path="/home"
-              element={
-                // <PrivateRoute>
+        <Router>
+          <CartProvider>
+            <Routes>
+              <Route path="/" element={<SignUp />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/login" element={<Login />} />
+
+              <Route
+                path="/home"
+                element={
+                  // <PrivateRoute>
                   <Exclusive />
-                // </PrivateRoute>
-              }
-            />
-            <Route path="/cart"  element={<Cart />} />
-            <Route path="/shop" element= {<Shop />} />
-            <Route path="/best-selling" element= {<BestSelling />} />
-          </Routes>
-          <ToastContainer position="bottom-left" />
-          <Footer />
+                  // </PrivateRoute>
+                }
+              />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/best-selling" element={<BestSelling />} />
+              <Route path="/our-product" element={<ExploreOurProduct />} />
+            </Routes>
+            <ToastContainer position="bottom-left" />
+            <Footer />
           </CartProvider>
         </Router>
-        
       </div>
     </>
   );
