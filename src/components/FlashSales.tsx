@@ -143,7 +143,7 @@ export const FlashSale = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="w-[190px]  md:w-auto md:h-auto bg-white pb-2 rounded-md shadow-sm"
+            className="w-[190px]  md:w-auto md:h-[380px] bg-white pb-2 rounded-md shadow-sm"
           >
             <div className="relative group cursor-pointer bg-gray-100 w-[190px] md:w-auto flex flex-col items-center rounded-t-md pt-3 md:h-[250px] h-[250px]">
               {/* Discount Badge */}
@@ -190,7 +190,7 @@ export const FlashSale = () => {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-2 mt-5">
+            <div className="flex flex-col gap-2 md:mt-8">
               <h2 className="font-medium text-base">{product.name}</h2>
 
               <div className="flex gap-3">

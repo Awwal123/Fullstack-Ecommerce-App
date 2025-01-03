@@ -169,7 +169,7 @@ export const BestSelling = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2 mt-5">
+                  <div className="flex flex-col gap-2 md:mt-8">
                     <h2 className="font-medium text-base">{product.name}</h2>
       
                     <div className="flex gap-3">
