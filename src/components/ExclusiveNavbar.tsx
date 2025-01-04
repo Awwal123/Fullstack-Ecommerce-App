@@ -64,13 +64,16 @@ export const ExclusiveNavbar = () => {
               Home
             </p>
           </Link>
-          <p
-            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
-              "/contact"
-            )}`}
-          >
-            Contact
-          </p>
+          <Link to={"/contact"}>
+            {" "}
+            <p
+              className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+                "/contact"
+              )}`}
+            >
+              Contact
+            </p>
+          </Link>
           <p
             className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
               "/shop"
@@ -87,13 +90,6 @@ export const ExclusiveNavbar = () => {
               About
             </p>
           </Link>
-          <p
-            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
-              "/signup"
-            )}`}
-          >
-            SignUp
-          </p>
         </div>
 
         <div className="flex gap-3 ">
@@ -196,7 +192,12 @@ export const ExclusiveNavbar = () => {
           </div>
           <div className="flex flex-col  mt-6 h-full">
             <p className="text-white text-lg py-2 cursor-pointer">Home</p>
-            <p className="text-white text-lg py-2 cursor-pointer">Contact</p>
+            <Link to={"/contact"}>
+              {" "}
+              <p className="text-white text-lg py-2 cursor-pointer">
+                Contact
+              </p>{" "}
+            </Link>
             <Link to={"/about-us"}>
               {" "}
               <p className="text-white text-lg py-2 cursor-pointer">
