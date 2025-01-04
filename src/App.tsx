@@ -10,6 +10,7 @@ import { Cart } from "./components/Cart";
 import { Shop } from "./components/Shop";
 import { BestSelling } from "./components/BestSelling";
 import { ExploreOurProduct } from "./components/Explore";
+import { AboutUs } from "./components/AboutUs";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/best-selling" element={<BestSelling />} />
               <Route path="/our-product" element={<ExploreOurProduct />} />
+              <Route path="/about-us" element={<AboutUs />} />
             </Routes>
             <ToastContainer position="bottom-left" />
             <Footer />

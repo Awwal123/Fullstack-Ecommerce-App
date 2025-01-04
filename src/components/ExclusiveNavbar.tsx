@@ -11,7 +11,7 @@ import use from "../assets/images/use.png";
 import logout from "../assets/images/logout.png";
 import Cancel from "../assets/images/cancel.png";
 import Review from "../assets/images/Reviews.png";
-import { useCart } from "./CartContext"; 
+import { useCart } from "./CartContext";
 
 export const ExclusiveNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -26,8 +26,11 @@ export const ExclusiveNavbar = () => {
     setIsDropDownOpen((prevState) => !prevState);
   };
   const { cartItems } = useCart();
- 
-const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+  const totalCartItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const isActive = (path: string) =>
     pathname === path ? "border-b-2 border-gray-500" : "";
@@ -52,13 +55,15 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
         </div>
 
         <div className="hidden md:flex items-center  justify-between gap-7">
-          <Link to={"/home"}><p
-            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
-              "/home"
-            )}`}
-          >
-            Home
-          </p></Link> 
+          <Link to={"/home"}>
+            <p
+              className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+                "/home"
+              )}`}
+            >
+              Home
+            </p>
+          </Link>
           <p
             className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
               "/contact"
@@ -73,13 +78,15 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
           >
             Shop
           </p>
-          <p
-            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
-              "/about"
-            )}`}
-          >
-            About
-          </p>
+          <Link to={"/about-us"}>
+            <p
+              className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+                "/about-us"
+              )}`}
+            >
+              About
+            </p>
+          </Link>
           <p
             className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
               "/signup"
@@ -116,11 +123,7 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
             <Link to={"/cart"}>
               {" "}
               <div className="relative">
-                <img
-                  src={Cart}
-                  alt="c"
-                  className="w-6 h-6 cursor-pointer"
-                />
+                <img src={Cart} alt="c" className="w-6 h-6 cursor-pointer" />
                 <p className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/3 cursor-pointer w-4 h-4 text-center text-xs bg-[#DB4444] text-white rounded-full">
                   {totalCartItems}
                 </p>
@@ -191,20 +194,41 @@ const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 
               onClick={() => setIsNavOpen(false)}
             />
           </div>
-          <div className="flex flex-col mt-6 h-full">
-            <p className="text-white text-lg py-2">Home</p>
-            <p className="text-white text-lg py-2">Contact</p>
-            <p className="text-white text-lg py-2">About</p>
-            <p className="text-white text-lg py-2">SignUp</p>
-            <p className="text-white text-lg py-2">Woman’s Fashion</p>
-            <p className="text-white text-lg py-2">Men’s Fashion</p>
-            <p className="text-white text-lg py-2">Electronics</p>
-            <p className="text-white text-lg py-2">Home & Lifestyle</p>
-            <p className="text-white text-lg py-2">Medicine</p>
-            <p className="text-white text-lg py-2">Sports & Outdoor</p>
-            <p className="text-white text-lg py-2">Groceries & Pets</p>
-            <p className="text-white text-lg py-2">Baby’s & Toys</p>
-            <p className="text-white text-lg py-2">Health & Beauty</p>
+          <div className="flex flex-col  mt-6 h-full">
+            <p className="text-white text-lg py-2 cursor-pointer">Home</p>
+            <p className="text-white text-lg py-2 cursor-pointer">Contact</p>
+            <Link to={"/about-us"}>
+              {" "}
+              <p className="text-white text-lg py-2 cursor-pointer">
+                About
+              </p>{" "}
+            </Link>
+            <p className="text-white text-lg py-2 cursor-pointer">SignUp</p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Woman’s Fashion
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Men’s Fashion
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Electronics
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Home & Lifestyle
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">Medicine</p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Sports & Outdoor
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Groceries & Pets
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Baby’s & Toys
+            </p>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Health & Beauty
+            </p>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export const JamBoxAdvert = () => {
   return (
     <div className="px-5 py-9 md:py-6 md:px-16">
       <div className="hidden md:block">
-        <div className="flex justify-between   text-white p-12 bg-black w-full md:h-[500px]">
+        <div className="flex justify-between  text-white p-12 bg-black w-full md:h-[500px]">
           <div className=" flex flex-col justify-between pt-5 gap-7">
             <p className="text-green-400 font-semibold ">Categories</p>
             <h1 className="text-white font-semibold text-5xl ">

@@ -11,7 +11,7 @@ export const NewArrival = () => {
       </div>
 
       <h2 className="font-semibold  md:text-3xl mt-4 flex ">New Arrival</h2>
-      <div className="mt-9 w-full h-[200px] md:h-[600px] flex md:flex-row flex-col gap-7 justify-between">
+      <div className="mt-9 w-full h-[200px] md:h-[600px] flex md:flex-row flex-col gap-7 justify-between mb-96 md:mb-0">
         <div className="md:w-[48%] w-full h-[600px] md:h-[600px] bg-black rounded-md flex justify-center items-center text-white relative">
           <div className="w-[85%] px-3">
             <img src={Ps5} alt="ps5" className="w-[551px] h-[400px] md:h-[540px] mx-auto" />
