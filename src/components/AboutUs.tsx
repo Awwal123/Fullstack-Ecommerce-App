@@ -4,6 +4,13 @@ import Secure from "../assets/images/security.png";
 import ShopingBag from "../assets/images/ShoppingBag.png";
 import Shop from "../assets/images/Shop.png";
 import MoneyBag from "../assets/images/Moneybag.png";
+import Tom from "../assets/images/Tom.png";
+import Emma from "../assets/images/Emma.png";
+import Smith from "../assets/images/Will.png";
+import Twitter from "../assets/images/Twitter.png";
+import Ig from "../assets/images/Instagram.png";
+import Linkedin from "../assets/images/Linkedin.png";
+import { WhyChooseUs } from "./WhyChooseUs";
 
 const data = [
   {
@@ -55,7 +62,7 @@ export const AboutUs = () => {
               Exclusive has 10,500 sallers and 300 brands and serves 3 millioons
               customers across the region.
             </p>
-            <p className="md:w-[505px] w-full text-base leading-[26px]">
+            <p className="md:w-[525px] w-full text-base leading-[26px]">
               Exclusive has more than 1 Million products to offer, growing at a
               very fast. Exclusive offers a diverse assotment in categories
               ranging from consumer.
@@ -92,14 +99,64 @@ export const AboutUs = () => {
           ))}
         </div>
 
-        <div className="px-5 md:px-16  w-full flex flex-col md:flex-row justify-center items-center gap-8">
-            <div className="md:w-[370px] w-full h-auto">
-                <div className="w-[370px]">
-
-                </div>
+        <div className="px-5 md:px-16  w-full flex flex-col  mt-20 md:mt-0 md:flex-row justify-between items-center gap-8">
+          {/* first */}
+          <div className="md:w-[370px] w-full h-auto">
+            <div className="md:w-[370px] w-full bg-gray-200 h-[430px] rounded-md flex justify-center items-center">
+              <img src={Tom} alt="" className="w-[236px] mt-10 h-[391px]" />
             </div>
+
+            <div className="flex flex-col gap-3 mt-2">
+              <h2 className="font-medium text-3xl tracking-wider">
+                Tom Cruise
+              </h2>
+              <p className="text-base">Founder & Chairman</p>
+              <div className="flex gap-3">
+                <img src={Twitter} alt="" className="w-6 h-6" />
+                <img src={Ig} alt="" className="w-6 h-6" />
+                <img src={Linkedin} alt="" className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-[370px] w-full h-auto">
+            <div className="md:w-[370px] w-full bg-gray-200 h-[430px] rounded-md flex justify-center items-center">
+              <img src={Emma} alt="" className="w-[294px] mt-8 h-[397px]" />
+            </div>
+
+            <div className="flex flex-col gap-3 mt-2">
+              <h2 className="font-medium text-3xl tracking-wider">
+                Emma Watson
+              </h2>
+              <p className="text-base">Managing Director</p>
+              <div className="flex gap-3">
+                <img src={Twitter} alt="" className="w-6 h-6" />
+                <img src={Ig} alt="" className="w-6 h-6" />
+                <img src={Linkedin} alt="" className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-[370px] w-full h-auto">
+            <div className="md:w-[370px] w-full bg-gray-200 h-[430px] rounded-md flex justify-center items-center">
+              <img src={Smith} alt="" className="w-[326px] mt-9  h-[392px]" />
+            </div>
+
+            <div className="flex flex-col gap-3 mt-2">
+              <h2 className="font-medium text-3xl tracking-wider">
+                Will Smith
+              </h2>
+              <p className="text-base">Product Designer</p>
+              <div className="flex gap-3">
+                <img src={Twitter} alt="" className="w-6 h-6" />
+                <img src={Ig} alt="" className="w-6 h-6" />
+                <img src={Linkedin} alt="" className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <WhyChooseUs />
     </>
   );
 };

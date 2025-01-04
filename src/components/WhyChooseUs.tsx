@@ -20,14 +20,14 @@ const datas = [
     id: 3,
     imgUrl: Secure,
     heading: "MONEY BACK GUARANTEE",
-    subheading: "We reurn money within 30 days",
+    subheading: "We return money within 30 days",
   },
 ];
 
 export const WhyChooseUs = () => {
   return (
     <div className="flex  justify-center">
-      <div className="flex md:flex-row gap-5 flex-col justify-between items-center  px-5 py-9 md:py-6 md:px-16 my-7 w-full max-w-6xl md:mt-0 mt-80">
+      <div className="flex md:flex-row gap-5 flex-col justify-between items-center  px-5 py-9 md:py-6 md:px-16 my-7 w-full max-w-6xl md:mt-0 mt-70">
         {datas.map((datum) => (
           <div
             key={datum.id}
