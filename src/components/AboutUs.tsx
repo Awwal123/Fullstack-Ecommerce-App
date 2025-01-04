@@ -1,7 +1,7 @@
 import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import Aboutbg from "../assets/images/About-bg.png";
 import Secure from "../assets/images/security.png";
-import ShopingBag from "../assets/images/ShoppingBag.png";
+import ShopingBag from "../assets/images/Shoppingbag.png";
 import Shop from "../assets/images/Shop.png";
 import MoneyBag from "../assets/images/Moneybag.png";
 import Tom from "../assets/images/Tom.png";

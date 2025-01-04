@@ -68,7 +68,7 @@ export const ContactUs = () => {
                 name=""
                 id=""
                 placeholder="Your Message"
-                className="w-full  bg-gray-100 text-gray-500 p-4 h-[207px]"
+                className="w-full resize-none  bg-gray-100 text-gray-500 p-4 h-[207px]"
               ></textarea>
             </div>
             <div className="flex justify-between">
