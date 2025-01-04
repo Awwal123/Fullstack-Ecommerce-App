@@ -99,9 +99,9 @@ export const Footer = () => {
               </div>
               <div className="flex justify-between w-2/3">
                 <img src={FB} alt="f" className="w-6 h-6" />
-                <img src={X} alt="f" className="w-6 h-6" />
-                <img src={Ig} alt="f" className="w-6 h-6" />
-                <img src={Linkedin} alt="f" className="w-6 h-6" />
+                <img src={X} alt="f" className="w-6 h-6 invert" />
+                <img src={Ig} alt="f" className="w-6 h-6 invert" />
+                <img src={Linkedin} alt="f" className="w-6 h-6 invert" />
               </div>
             </div>
           </div>

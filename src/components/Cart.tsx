@@ -5,11 +5,13 @@ import up from "../assets/images/DropUp.png";
 import down from "../assets/images/DropDown.png";
 import { useCart } from "./CartContext";
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 export const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, total } = useCart();
   return (
     <>
       <ExclusiveNavbar />
+      <Fade direction="up" duration={2000} triggerOnce>
       <div className=" w-full  px-3 py-3 md:py-4 md:px-16">
         <div className="flex text-sm my-4 md:my-7 gap-4">
           <p className="text-gray-500">Home </p>
@@ -178,6 +180,7 @@ export const Cart = () => {
          
         </div>
       </div>
+      </Fade>
     </>
   );
 };

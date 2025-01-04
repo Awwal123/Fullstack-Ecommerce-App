@@ -74,13 +74,16 @@ export const ExclusiveNavbar = () => {
               Contact
             </p>
           </Link>
-          <p
-            className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
-              "/shop"
-            )}`}
-          >
-            Shop
-          </p>
+          <Link to={"/shop"}>
+            {" "}
+            <p
+              className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
+                "/shop"
+              )}`}
+            >
+              Shop
+            </p>
+          </Link>
           <Link to={"/about-us"}>
             <p
               className={`text-base font-normal cursor-pointer hover:text-gray-400 ${isActive(
@@ -204,7 +207,11 @@ export const ExclusiveNavbar = () => {
                 About
               </p>{" "}
             </Link>
-            <p className="text-white text-lg py-2 cursor-pointer">SignUp</p>
+            <Link to={"/shop"}>
+            <p className="text-white text-lg py-2 cursor-pointer">
+              Shop
+            </p>
+            </Link>
             <p className="text-white text-lg py-2 cursor-pointer">
               Woman’s Fashion
             </p>

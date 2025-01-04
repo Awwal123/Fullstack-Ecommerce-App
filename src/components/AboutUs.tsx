@@ -11,6 +11,7 @@ import Twitter from "../assets/images/Twitter.png";
 import Ig from "../assets/images/Instagram.png";
 import Linkedin from "../assets/images/Linkedin.png";
 import { WhyChooseUs } from "./WhyChooseUs";
+import { Fade } from "react-awesome-reveal";
 
 const data = [
   {
@@ -43,6 +44,7 @@ export const AboutUs = () => {
   return (
     <>
       <ExclusiveNavbar />
+      <Fade direction="up" duration={2000} triggerOnce>
       <div className="w-full px-5  md:py-6 md:px-0 my-7">
         <div className="flex text-sm my-0 md:my-7  gap-4 px-5 md:px-16">
           <p className="text-gray-500">Home </p>
@@ -157,6 +159,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <WhyChooseUs />
+      </Fade>
     </>
   );
 };

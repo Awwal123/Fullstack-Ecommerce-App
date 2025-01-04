@@ -1,11 +1,13 @@
 import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import Mail from "../assets/images/Mail.png";
 import Phone from "../assets/images/Phone.png";
+import { Fade } from "react-awesome-reveal";
 
 export const ContactUs = () => {
   return (
     <>
       <ExclusiveNavbar />
+      <Fade direction="up" duration={2000} triggerOnce>
       <div className="w-full px-5 py-9 md:py-6 md:px-16 my-7">
         <div className="flex text-sm  gap-4 ">
           <p className="text-gray-500">Home </p>
@@ -80,6 +82,7 @@ export const ContactUs = () => {
           </div>
         </div>
       </div>
+      </Fade>
     </>
   );
 };

@@ -12,6 +12,7 @@ import { BestSelling } from "./components/BestSelling";
 import { ExploreOurProduct } from "./components/Explore";
 import { AboutUs } from "./components/AboutUs";
 import { ContactUs } from "./components/ContactUs";
+import { Notfound } from "./components/NotFound";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
               <Route path="/our-product" element={<ExploreOurProduct />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path= "/contact" element ={<ContactUs />} />
+              <Route path="*" element= {<Notfound />} />
             </Routes>
             <ToastContainer position="bottom-left" />
             <Footer />
