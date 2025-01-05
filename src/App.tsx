@@ -14,6 +14,7 @@ import { AboutUs } from "./components/AboutUs";
 import { ContactUs } from "./components/ContactUs";
 import { Notfound } from "./components/NotFound";
 import { CheckOut } from "./components/CheckOut";
+import { Account } from "./components/Account";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
               <Route path="/contact" element={<ContactUs />} />
               <Route path="*" element={<Notfound />} />
               <Route path="/checkout" element={<CheckOut />} />
+              <Route path="/account" element={<Account />} />
             </Routes>
             <ToastContainer position="bottom-left" />
             <Footer />

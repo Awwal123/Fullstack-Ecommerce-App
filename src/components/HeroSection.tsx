@@ -19,6 +19,7 @@ export const HeroSection = () => {
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
 
+
   const saveToFirestore = async (uid: string, userData: object) => {
     try {
       const userDocRef = doc(db, "users", uid);
@@ -48,6 +49,7 @@ export const HeroSection = () => {
       const user = userCredential.user;
 
       console.log("User created:", user.email, "UID:", user.uid);
+    
 
       // Save to Firestore with default empty arrays for cart, orders, and wishlist
       await saveToFirestore(user.uid, {
@@ -60,6 +62,7 @@ export const HeroSection = () => {
 
       localStorage.setItem("userUID", user.uid);
       console.log("Setting userUID in localStorage:", user.uid);
+    
 
       toast.success("Account created successfully. Redirecting...");
       setTimeout(() => navigate("/home"), 2000); // Navigate after a delay

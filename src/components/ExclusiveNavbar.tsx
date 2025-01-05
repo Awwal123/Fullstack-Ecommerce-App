@@ -35,6 +35,8 @@ export const ExclusiveNavbar = () => {
   const isActive = (path: string) =>
     pathname === path ? "border-b-2 border-gray-500" : "";
 
+  const userActive = (path: string) =>
+    pathname === path ? "bg-customRed rounded-full  w-6 h-6" : "";
   return (
     <div>
       <div className="bg-white w-full flex justify-between items-center px-5 py-3 md:py-4 md:px-16 relative">
@@ -133,7 +135,9 @@ export const ExclusiveNavbar = () => {
               <img
                 src={User}
                 alt="u"
-                className="w-6 h-6 hover:bg-[#DB4444] hover:rounded-full cursor-pointer"
+                className={`w-6 h-6 hover:bg-[#DB4444] hover:rounded-full cursor-pointer ${userActive(
+                  "/account"
+                )}`}
                 onClick={toggleDropDown}
               />
               {isDropDownOpen && (
@@ -147,10 +151,13 @@ export const ExclusiveNavbar = () => {
                       onClick={toggleDropDown}
                     />
                   </div>
-                  <div className="flex items-center cursor-pointer gap-2 ">
-                    <img src={use} alt="" className="w-7 h-7" />
-                    <p>Manage My Account</p>
-                  </div>
+                  <Link to={"/account"}>
+                    {" "}
+                    <div className="flex items-center cursor-pointer gap-2 ">
+                      <img src={use} alt="" className="w-7 h-7" />
+                      <p>Manage My Account</p>
+                    </div>
+                  </Link>
 
                   <div className="flex items-center cursor-pointer gap-2 ">
                     <img src={Mall} alt="" className="w-5 h-5" />
@@ -208,9 +215,7 @@ export const ExclusiveNavbar = () => {
               </p>{" "}
             </Link>
             <Link to={"/shop"}>
-            <p className="text-white text-lg py-2 cursor-pointer">
-              Shop
-            </p>
+              <p className="text-white text-lg py-2 cursor-pointer">Shop</p>
             </Link>
             <p className="text-white text-lg py-2 cursor-pointer">
               Woman’s Fashion
