@@ -15,7 +15,7 @@ import Rubic2 from "../assets/images/Rubic2.png";
 
 export const products = [
   {
-    id: 10,
+    id: 110,
     name: "Men Casual Sneakers",
     price: 560,
     oldPrice: 1400,
@@ -25,7 +25,7 @@ export const products = [
     ratingCount: 60,
   },
   {
-    id: 11,
+    id: 111,
     name: "Itel 20000mh Power Bank",
     price: 150,
     oldPrice: 500,
@@ -35,7 +35,7 @@ export const products = [
     ratingCount: 215,
   },
   {
-    id: 12,
+    id: 112,
     name: "Sony PS4 Console",
     price: 1200,
     oldPrice: 2000,
@@ -45,7 +45,7 @@ export const products = [
     ratingCount: 96,
   },
   {
-    id: 13,
+    id: 113,
     name: "P47 Wireless Headphone",
     price: 116,
     oldPrice: 560,
@@ -55,7 +55,7 @@ export const products = [
     ratingCount: 78,
   },
   {
-    id: 14,
+    id: 114,
     name: "Casual High-Top Shoes",
     price: 420,
     oldPrice: 1200,
@@ -65,7 +65,7 @@ export const products = [
     ratingCount: 28,
   },
   {
-    id: 15,
+    id: 115,
     name: "XIAOMI Redmi 13 6.79",
     price: 700,
     oldPrice: 900,
@@ -75,7 +75,7 @@ export const products = [
     ratingCount: 300,
   },
   {
-    id: 16,
+    id: 116,
     name: "2 In 1 Men's Short Sleeve",
     price: 20,
     oldPrice: 200,
@@ -85,7 +85,7 @@ export const products = [
     ratingCount: 96,
   },
   {
-    id: 17,
+    id: 117,
     name: "Rubick Cube",
     price: 7,
     oldPrice: 18,
@@ -126,6 +126,7 @@ export const BestSelling = () => {
 
       <div className="flex w-auto overflow-y-auto gap-12 md:grid md:grid-cols md:grid-cols-4 md:gap-9 ">
         {products.map((product) => (
+          <Link to={`/product/${product.id}`}>
           <div
             key={product.id}
             className="w-[190px] my-5 md:w-auto md:h-auto bg-white pb-2 rounded-md shadow-sm"
@@ -189,6 +190,7 @@ export const BestSelling = () => {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
       <hr className="border my-9 md:mt-20" mt-10 />

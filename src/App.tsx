@@ -48,7 +48,7 @@ function App() {
               <Route path="*" element={<Notfound />} />
               <Route path="/checkout" element={<CheckOut />} />
               <Route path="/account" element={<Account />} />
-              <Route path= "product-details" element={<ProductDetails />} />
+              <Route path= "/product/:id" element={<ProductDetails />} />
             </Routes>
             <ToastContainer position="bottom-left" />
             <Footer />
