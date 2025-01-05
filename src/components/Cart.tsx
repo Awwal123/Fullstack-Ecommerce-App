@@ -121,7 +121,7 @@ export const Cart = () => {
               </div>
             ))
           ) : (
-            <h1 className="empty-cart-message">Your cart is empty!</h1>
+            <h1 className="mt-5 text-center text-3xl text-red-600">Your cart is empty!</h1>
           )}
         </div>
 

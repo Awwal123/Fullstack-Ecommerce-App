@@ -1,7 +1,5 @@
 import { Fade } from "react-awesome-reveal";
 import { ExclusiveNavbar } from "./ExclusiveNavbar";
-import Pad from "../assets/images/WiredPad.png";
-import Monitor from "../assets/images/GamingMonitor.png";
 import Bkash from "../assets/images/Bkash.png";
 import Visa from "../assets/images/Visa.png";
 import Master from "../assets/images/Mastercard.png";
