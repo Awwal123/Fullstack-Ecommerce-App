@@ -126,12 +126,14 @@ export const BestSelling = () => {
 
       <div className="flex w-auto overflow-y-auto gap-12 md:grid md:grid-cols md:grid-cols-4 md:gap-9 ">
         {products.map((product) => (
-          <Link to={`/product/${product.id}`}>
           <div
             key={product.id}
             className="w-[190px] my-5 md:w-auto md:h-auto bg-white pb-2 rounded-md shadow-sm"
           >
-            <div className="relative group cursor-pointer bg-gray-100 w-[190px] md:w-auto flex flex-col items-center rounded-t-md pt-3 md:h-[250px] h-[250px]">
+            <Link
+              to={`/product/${product.id}`}
+              className="relative group cursor-pointer bg-gray-100 w-[190px] md:w-auto flex flex-col items-center rounded-t-md pt-3 md:h-[250px] h-[250px]"
+            >
               <div className="px-3 flex w-full justify-between">
                 <div className="bg-[#DB4444] w-[55px] h-[26px] rounded-md text-xs flex items-center justify-center text-white">
                   {product.discount}
@@ -142,37 +144,35 @@ export const BestSelling = () => {
                 <div className="flex justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
                   <img src={Favorite} alt="favorite" />
                 </div>
-                {/* <div className="md:flex hidden justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
-                        <img src={Eye} alt="eye" />
-                      </div> */}
               </div>
 
-              <div className="flex justify-center items-center ">
+              <div className="flex justify-center items-center flex-1">
                 <img
                   src={product.imgUrl}
-                  className="w-[170px]   md:w-[190px] md:h-[180px]"
+                  className="w-[170px] md:w-[190px] md:h-[180px] object-contain"
                   alt={product.imgUrl}
                 />
               </div>
 
-              {/* Add to Cart Button (Hidden by Default) */}
-              <div className="w-full mt-auto">
-                <button
-                  className="bg-black w-full py-2 rounded-b-md text-white md:opacity-0 group-hover:opacity-100 transition-opacity"
-                  onClick={() =>
-                    addToCart({
-                      id: product.id,
-                      name: product.name,
-                      price: product.price,
-                      quantity: 1, // Default to 1 when adding to cart
-                      imgUrl: product.imgUrl,
-                    })
-                  }
-                >
-                  Add To Cart
-                </button>
-              </div>
-            </div>
+              {/* Add to Cart Button */}
+              <button
+                className="absolute bottom-0 bg-black w-full py-2 rounded-b-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  addToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    quantity: 1,
+                    imgUrl: product.imgUrl,
+                  });
+                }}
+              >
+                Add To Cart
+              </button>
+            </Link>
+
             <div className="flex flex-col gap-2 md:mt-8">
               <h2 className="font-medium text-base">{product.name}</h2>
 
@@ -182,7 +182,7 @@ export const BestSelling = () => {
                   ${product.oldPrice}
                 </p>
               </div>
-              <div className="flex gap-3 ">
+              <div className="flex gap-3">
                 <img src={getRatingImage(product.rating)} alt="" />
                 <p className="font-semibold text-gray-600 text-sm">
                   ({product.ratingCount})
@@ -190,7 +190,6 @@ export const BestSelling = () => {
               </div>
             </div>
           </div>
-          </Link>
         ))}
       </div>
       <hr className="border my-9 md:mt-20" mt-10 />

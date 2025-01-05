@@ -1,6 +1,6 @@
 import Arrow from "../assets/images/ArowUp.png";
 
-export const Upbutton = () => {
+export const ScrollToTop = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0, 
@@ -9,7 +9,7 @@ export const Upbutton = () => {
     };
 
     return (
-        <div className="w-full px-5 py-9 md:py-10 md:px-16">
+        <div className="w-full px-5 py-9 md:pt-10 md:px-16">
             <div className="flex justify-between">
                 <div></div>
                 <div 
