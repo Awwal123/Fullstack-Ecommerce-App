@@ -127,7 +127,7 @@ export const FlashSale = () => {
       </div>
 
       <div className="flex mt-5 justify-between w-full ">
-        <div className="flex items-center justify-between w-full mb-5 md:w-1/2 md:gap-0">
+        <div className="flex items-center justify-between w-full mb-5 md:justify-start  md:gap-10">
           <h2 className="font-semibold md:text-3xl">Flash Sales</h2>
           <div className="flex flex-col md:mb-5 gap-2">
             <div className=" hidden md:flex gap-7 justify-center text-xs">

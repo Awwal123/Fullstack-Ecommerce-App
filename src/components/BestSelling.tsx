@@ -105,7 +105,7 @@ export const BestSelling = () => {
     return ""; // Default empty path for other ratings
   };
   return (
-    <div className="w-full px-5 py-9 md:py-6 md:px-16 ">
+    <div className="w-full px-5 pb-9 md:py-6 md:px-16 ">
       <div className="flex items-center gap-3">
         <div className="w-5 h-10 bg-[#DB4444] rounded-md"></div>
         <p className="text-customRed text-base font-semibold">This Month</p>
