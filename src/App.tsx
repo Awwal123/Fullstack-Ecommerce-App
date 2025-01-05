@@ -42,9 +42,9 @@ function App() {
               <Route path="/best-selling" element={<BestSelling />} />
               <Route path="/our-product" element={<ExploreOurProduct />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path= "/contact" element ={<ContactUs />} />
-              <Route path="*" element= {<Notfound />} />
-              <Route path="/check-out" element ={<CheckOut />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="*" element={<Notfound />} />
+              <Route path="/checkout" element={<CheckOut />} />
             </Routes>
             <ToastContainer position="bottom-left" />
             <Footer />

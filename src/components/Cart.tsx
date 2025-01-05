@@ -4,10 +4,15 @@ import cancle from "../assets/images/CancelBtn.png";
 import up from "../assets/images/DropUp.png";
 import down from "../assets/images/DropDown.png";
 import { useCart } from "./CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 export const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, total } = useCart();
+  const navigate = useNavigate();
+
+  const proceedToCheckout = () => {
+    navigate ('/checkout')
+  }
   return (
     <>
       <ExclusiveNavbar />
@@ -171,7 +176,7 @@ export const Cart = () => {
                 <p className="">${total.toFixed(2)}</p>
               </div>
 
-              <div className="flex items-center mx-auto cursor-pointer justify-center hover:bg-[#E07575] bg-customRed text-white rounded-sm w-[211px] h-[56px]">
+              <div onClick={proceedToCheckout} className="flex items-center mx-auto cursor-pointer justify-center hover:bg-[#E07575] bg-customRed text-white rounded-sm w-[211px] h-[56px]">
                 Proceed to checkout
               </div>
             </div>

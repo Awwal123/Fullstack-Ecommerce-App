@@ -6,8 +6,10 @@ import Bkash from "../assets/images/Bkash.png";
 import Visa from "../assets/images/Visa.png";
 import Master from "../assets/images/Mastercard.png";
 import Nagad from "../assets/images/Nagad.png";
+import { useCart } from "./CartContext";
 
 export const CheckOut = () => {
+  const { cartItems, total } = useCart();
   return (
     <>
       <ExclusiveNavbar />
@@ -97,50 +99,57 @@ export const CheckOut = () => {
                 </div>
               </div>
               <div className="flex gap-3">
-                <input type="checkbox" className="appearance-none border border-gray-300 rounded-md h-6 w-6 bg-gray-100 cursor-pointer checked:bg-customRed checked:border-customRed focus:outline-none focus:ring-2 focus:ring-customRed checked:icon-check" />
+                <input
+                  type="checkbox"
+                  className="appearance-none border border-gray-300 rounded-md h-6 w-6 bg-gray-100 cursor-pointer checked:bg-customRed checked:border-customRed focus:outline-none focus:ring-2 focus:ring-customRed checked:icon-check"
+                />
                 <p>Save this information for faster check-out next time</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 md:my-24 w-full md:w-[50%] ">
-              <div className="flex gap-10 flex-col">
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4 items-center">
-                    <img src={Pad} alt="" className="w-[54px] h-[54px]" />
 
-                    <p>LCD Monitor</p>
+            <div className="flex flex-col gap-4  md:my-24 w-full md:w-[50%] ">
+              <div className="md:h-[500px] h-auto overflow-auto">
+                {cartItems.map((item) => (
+                  <div key={item.id} className="flex gap-2  flex-col">
+                    <div className="flex items-center justify-between">
+                      <div className="flex gap-4 items-center">
+                        <img
+                          src={item.imgUrl}
+                          alt=""
+                          className="w-[54px] h-[54px]"
+                        />
+
+                        <p>{item.name}</p>
+                      </div>
+                      <p>${item.price}</p>
+                    </div>
+                    <hr className="border my-4 border-gray" />
                   </div>
-                  <p>$650</p>
+                ))}
+              </div>
+              <div className="mt-5">
+                <div className="flex justify-between items-center">
+                  <p>Subtotal:</p>
+                  <p>${total.toFixed(2)}</p>
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4 items-center">
-                    <img src={Monitor} alt="" className="w-[54px] h-[54px]" />
-                    <p>H1 Gamepad</p>
-                  </div>
-                  <p>$1110</p>
-                </div>
+                <hr className="border my-4 border-gray" />
               </div>
               <div>
-                <div className="mt-5">
-                  <div className="flex justify-between items-center">
-                    <p>Subtotal:</p>
-                    <p>$650</p>
-                  </div>
-                  <hr className="border my-4 border-gray" />
+                <div className="flex justify-between items-center">
+                  <p>Shipping:</p>
+                  <p>Free</p>
                 </div>
-                <div>
-                  <div className="flex justify-between items-center">
-                    <p>Shipping:</p>
-                    <p>Free</p>
-                  </div>
-                  <hr className="border my-4 border-gray" />
+                <hr className="border my-4 border-gray" />
+              </div>
+              <div>
+                <div className="flex justify-between items-center">
+                  <p>Total:</p>
+                  <p>${total.toFixed(2)}</p>
                 </div>
-                <div>
-                  <div className="flex justify-between items-center">
-                    <p>Total:</p>
-                    <p>$1170</p>
-                  </div>
-                  <hr className="border my-4 border-gray" />
-                </div>
+                <hr className="border my-4 border-gray" />
+              </div>
+
+              <div>
                 <div className="mt-9">
                   <div className="flex md:flex-row  justify-between items-center">
                     <div className="flex  gap-4">
