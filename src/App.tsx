@@ -13,6 +13,7 @@ import { ExploreOurProduct } from "./components/Explore";
 import { AboutUs } from "./components/AboutUs";
 import { ContactUs } from "./components/ContactUs";
 import { Notfound } from "./components/NotFound";
+import { CheckOut } from "./components/CheckOut";
 // import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Route path="/about-us" element={<AboutUs />} />
               <Route path= "/contact" element ={<ContactUs />} />
               <Route path="*" element= {<Notfound />} />
+              <Route path="/check-out" element ={<CheckOut />} />
             </Routes>
             <ToastContainer position="bottom-left" />
             <Footer />
