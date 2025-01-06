@@ -5,9 +5,14 @@ import Visa from "../assets/images/Visa.png";
 import Master from "../assets/images/Mastercard.png";
 import Nagad from "../assets/images/Nagad.png";
 import { useCart } from "./CartContext";
+import { toast } from "react-toastify";
 
 export const CheckOut = () => {
   const { cartItems, total } = useCart();
+
+  const handleClick = () => {
+    toast.success("Hooray! Your order is on its way.")
+  }
   return (
     <>
       <ExclusiveNavbar />
@@ -177,7 +182,7 @@ export const CheckOut = () => {
                       Apply Coupon
                     </div>
                   </div>
-                  <div className=" md:mt-7 mt-5 flex items-center justify-center cursor-pointer hover:bg-[#E07575] bg-customRed text-white rounded-sm w-[35vw] md:w-[211px] h-[56px]">
+                  <div onClick={handleClick} className=" md:mt-7 mt-5 flex items-center justify-center cursor-pointer hover:bg-[#E07575] bg-customRed text-white rounded-sm w-[35vw] md:w-[211px] h-[56px]">
                     Place Order
                   </div>
                   <div></div>

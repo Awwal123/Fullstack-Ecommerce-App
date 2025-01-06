@@ -60,28 +60,31 @@ import DualShockController from "../assets/images/Categories/gamepad-pad.png";
 import JoystickController from "../assets/images/Categories/joystick-pad.png";
 import PS4GamingSet from "../assets/images/Categories/PS4.png";
 import PS5GamingSet from "../assets/images/Categories/PS5.png";
-import Pad from "../assets/images/Categories/WiredPad.png"
+import Pad from "../assets/images/Categories/WiredPad.png";
+import Fragnance from "../assets/images/Category-Fragnance.png";
+import Groceries from "../assets/images/Category-Groceriece.png";
 
 import { ScrollToTop } from "./ScrollToTop";
+import { useState } from "react";
 const products = [
   {
     id: 130,
     name: "Iphone 15 Pro",
     price: 500,
     imgUrl: Iphone15pro,
-    category: "Phone",
+    category: "Phones",
     details:
       "The latest iPhone model featuring cutting-edge technology and design.",
     rating: 5,
     ratingCount: 330,
   },
- 
+
   {
     id: 133,
     name: "iPhone 14 Pro Max",
     price: 800,
     imgUrl: Iphone14ProMax,
-    category: "Phone",
+    category: "Phones",
     details:
       "Top-of-the-line iPhone with an expansive display and superior performance.",
     rating: 5,
@@ -92,7 +95,7 @@ const products = [
     name: "Samsung Galaxy A06",
     price: 300,
     imgUrl: SamsungalaxyA06,
-    category: "Phone",
+    category: "Phones",
     details:
       "An affordable smartphone with essential features for everyday use.",
     rating: 5,
@@ -103,7 +106,7 @@ const products = [
     name: "iPhone 6s",
     price: 200,
     imgUrl: Iphone5s,
-    category: "Phone",
+    category: "Phones",
     details:
       "Classic iPhone model with a compact design and reliable performance.",
     rating: 4,
@@ -113,7 +116,7 @@ const products = [
     id: 153,
     name: "Strawberry",
     imgUrl: Strawberry,
-    category: "Fgroceries",
+    category: "Groceries",
     details: "Juicy and sweet strawberries, perfect for desserts.",
     price: 5,
     rating: 4,
@@ -124,7 +127,7 @@ const products = [
     id: 148,
     name: "Banana",
     imgUrl: Banana,
-    category: "groceries",
+    category: "Groceries",
     details: "Sweet and ripe bananas, perfect for snacking.",
     price: 2,
     rating: 5,
@@ -134,7 +137,7 @@ const products = [
     id: 154,
     name: "Nescafe Coffee",
     imgUrl: Nescafe,
-    category: "groceries",
+    category: "Groceries",
     details:
       "Rich and aromatic Nescafe coffee for a perfect start to your day.",
     price: 8,
@@ -145,7 +148,7 @@ const products = [
     id: 151,
     name: "Egg",
     imgUrl: Egg,
-    category: "groceries",
+    category: "Groceries",
     details: "Farm-fresh eggs perfect for cooking and baking.",
     price: 2.5,
     rating: 4,
@@ -153,7 +156,7 @@ const products = [
   },
   {
     id: 157,
-    name: "David off",
+    name: "Davido off",
     imgUrl: DavidoOff,
     category: "Fragrance",
     details: "Elegant and iconic, perfect for evening wear.",
@@ -195,7 +198,7 @@ const products = [
     id: 166,
     name: "Silver Rolex",
     imgUrl: SilverRolex,
-    category: "Smartwatch",
+    category: "SmartWatch",
     details: "Stylish silver smartwatch with sleek aesthetics.",
     price: 400,
     rating: 5,
@@ -210,13 +213,13 @@ const products = [
     price: 600,
     rating: 5,
     ratingCount: 700,
-},
+  },
   {
     id: 137,
     name: "Tecno Pop 9",
     price: 250,
     imgUrl: TecnoPop9,
-    category: "Phone",
+    category: "Phones",
     details:
       "Budget-friendly smartphone with a large display and long-lasting battery.",
     rating: 5,
@@ -227,7 +230,7 @@ const products = [
     name: "Xiaomi Redmi 14C",
     price: 280,
     imgUrl: XIAOMRedmi14C,
-    category: "Phone",
+    category: "Phones",
     details:
       "Feature-packed smartphone with great performance at an affordable price.",
     rating: 4.5,
@@ -238,7 +241,7 @@ const products = [
     id: 140,
     name: "Apple MacBook Pro",
     imgUrl: AppleMacBookPro,
-    category: "Computer",
+    category: "Computers",
     details:
       "Powerful laptop with advanced features for professionals and creatives.",
     price: 1200,
@@ -249,20 +252,19 @@ const products = [
     id: 141,
     name: "Dell Latitude 7400 Touch Screen",
     imgUrl: DellLatitude7400TouchScreen,
-    category: "Computer",
+    category: "Computers",
     details:
       "Versatile and durable laptop with a responsive touch screen for business use.",
     price: 1000,
     rating: 5,
     ratingCount: 480,
   },
- 
 
   {
     id: 143,
     name: "HP Notebook 348 G5",
     imgUrl: HpNoteBook348G5,
-    category: "Computer",
+    category: "Computers",
     details:
       "Reliable and affordable notebook with essential features for daily tasks.",
     price: 600,
@@ -273,7 +275,7 @@ const products = [
     id: 150,
     name: "Cat Food",
     imgUrl: CatFood,
-    category: "groceries",
+    category: "Groceries",
     details: "Healthy and delicious food for your cat.",
     price: 15,
     rating: 5,
@@ -284,7 +286,7 @@ const products = [
     id: 145,
     name: "Apple",
     imgUrl: Apple,
-    category: "groceries",
+    category: "Groceries",
     details: "Fresh and crispy apples perfect for snacks and desserts.",
     price: 3,
     rating: 5,
@@ -294,7 +296,7 @@ const products = [
     id: 146,
     name: "Mixed Fruits",
     imgUrl: fruits,
-    category: "groceries",
+    category: "Groceries",
     details: "A delightful mix of fresh seasonal fruits.",
     price: 5,
     rating: 4.5,
@@ -304,7 +306,7 @@ const products = [
     id: 147,
     name: "Dog Food",
     imgUrl: DogFoood,
-    category: "groceries",
+    category: "Groceries",
     details: "Nutritious dog food for a healthy and happy pet.",
     price: 20,
     rating: 4.5,
@@ -314,7 +316,7 @@ const products = [
     id: 142,
     name: "HP EliteBook 840 G5",
     imgUrl: HpEliteBook840G5,
-    category: "Computer",
+    category: "Computers",
     details:
       "High-performance laptop with robust security features for enterprise users.",
     price: 950,
@@ -326,7 +328,7 @@ const products = [
     name: "iPhone X",
     price: 400,
     imgUrl: IphoneX,
-    category: "Phone",
+    category: "Phones",
     details:
       "Revolutionary iPhone with a stunning OLED display and Face ID technology.",
     rating: 4.5,
@@ -337,7 +339,7 @@ const products = [
     id: 149,
     name: "Tin Tomato",
     imgUrl: TinTomato,
-    category: "groceries",
+    category: "Groceries",
     details: "High-quality canned tomatoes, ideal for cooking.",
     price: 1.5,
     rating: 5,
@@ -348,7 +350,7 @@ const products = [
     id: 152,
     name: "Milk",
     imgUrl: Milk,
-    category: "groceries",
+    category: "Groceries",
     details: "Fresh and creamy milk, great for your daily needs.",
     price: 3,
     rating: 4,
@@ -372,7 +374,7 @@ const products = [
     name: "iPhone 13 Pro",
     price: 600,
     imgUrl: Iphone13Pro,
-    category: "Phone",
+    category: "Phones",
     details:
       "A powerful smartphone with advanced features, ideal for photography and multitasking.",
     rating: 4,
@@ -383,7 +385,7 @@ const products = [
     id: 155,
     name: "Rice",
     imgUrl: Rice,
-    category: "groceries",
+    category: "Groceries",
     details: "High-quality rice, ideal for everyday meals.",
     price: 10,
     rating: 4,
@@ -393,7 +395,7 @@ const products = [
     id: 144,
     name: "Lenovo IdeaPad 15",
     imgUrl: LenovoideaPad,
-    category: "Computer",
+    category: "Computers",
     details:
       "Affordable laptop with solid performance for home and office use.",
     price: 550,
@@ -410,7 +412,7 @@ const products = [
     rating: 4.5,
     ratingCount: 200,
   },
-  
+
   {
     id: 161,
     name: "Midnight Whisper",
@@ -445,7 +447,7 @@ const products = [
     id: 164,
     name: "Apple Wrist Watch",
     imgUrl: AppleWristWatch,
-    category: "Smartwatch",
+    category: "SmartWatch",
     details: "High-tech Apple wristwatch with advanced features.",
     price: 350,
     rating: 5,
@@ -455,7 +457,7 @@ const products = [
     id: 165,
     name: "Golden Rolex",
     imgUrl: GoldenRolex,
-    category: "Smartwatch",
+    category: "SmartWatch",
     details: "Elegant golden smartwatch with premium design.",
     price: 450,
     rating: 4.5,
@@ -466,7 +468,7 @@ const products = [
     id: 167,
     name: "Edifice Watch",
     imgUrl: EdificeWatch,
-    category: "Smartwatch",
+    category: "SmartWatch",
     details: "Modern smartwatch with robust build and features.",
     price: 200,
     rating: 4,
@@ -476,7 +478,7 @@ const products = [
     id: 168,
     name: "Brown Leather Watch",
     imgUrl: BrownLeatherWatch,
-    category: "Smartwatch",
+    category: "SmartWatch",
     details: "Classic brown leather smartwatch for all occasions.",
     price: 250,
     rating: 4.5,
@@ -526,7 +528,7 @@ const products = [
     id: 173,
     name: "Black Over-Ear Headphones",
     imgUrl: BlackOverEarHeadphones,
-    category: "Headphones",
+    category: "HeadPhones",
     details: "Premium black over-ear headphones for immersive sound.",
     price: 150,
     rating: 4,
@@ -536,7 +538,7 @@ const products = [
     id: 174,
     name: "Headphones with Microphone",
     imgUrl: HeadphonesWithMicrophone,
-    category: "Headphones",
+    category: "HeadPhones",
     details: "Versatile headphones with built-in microphone.",
     price: 120,
     rating: 4,
@@ -546,7 +548,7 @@ const products = [
     id: 175,
     name: "Wireless Headphones",
     imgUrl: WirelessHeadphones,
-    category: "Headphones",
+    category: "HeadPhones",
     details:
       "Wireless headphones with excellent battery life and sound quality.",
     price: 180,
@@ -562,8 +564,8 @@ const products = [
     price: 70,
     rating: 4,
     ratingCount: 450,
-},
-{
+  },
+  {
     id: 177,
     name: "Joystick Controller",
     imgUrl: JoystickController,
@@ -572,8 +574,8 @@ const products = [
     price: 50,
     rating: 4.5,
     ratingCount: 300,
-},
-{
+  },
+  {
     id: 178,
     name: "PS4 Gaming Set",
     imgUrl: PS4GamingSet,
@@ -582,7 +584,7 @@ const products = [
     price: 400,
     rating: 4,
     ratingCount: 520,
-},
+  },
 
   {
     id: 101,
@@ -628,9 +630,26 @@ const categories = [
     imgUrl: GamePad,
     subhead: "Gaming",
   },
+  {
+    id: 7,
+    imgUrl: Groceries,
+    subhead: "Groceries",
+  },
+  {
+    id: 8,
+    imgUrl: Fragnance,
+    subhead: "Fragrance",
+  },
 ];
 
 export const Shop = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  // Filtered products based on the selected category
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
+
   const { addToCart } = useCart();
   const getRatingImage = (rating: number) => {
     if (rating === 5) return five;
@@ -638,6 +657,7 @@ export const Shop = () => {
     if (rating === 4) return four;
     return ""; // Default empty path for other ratings
   };
+
   return (
     <>
       <ExclusiveNavbar />
@@ -648,7 +668,7 @@ export const Shop = () => {
         </div>
         <div className="flex mb-12  justify-between">
           <h2 className="font-semibold items-center  md:text-3xl mt-4 flex ">
-            Explore Our Products
+          Browse By Category
           </h2>
           <input
             type="text"
@@ -661,19 +681,20 @@ export const Shop = () => {
           {categories.map((category) => (
             <div
               key={category.id}
+              onClick={() => setSelectedCategory(category.subhead)}
               className="group flex flex-col cursor-pointer rounded-md hover:bg-customRed hover:border-none hover:text-white gap-3  w-[170px] h-[145px] justify-center items-center border border-gray-400"
             >
               <img
                 src={category.imgUrl}
                 alt="cell"
-                className="group-hover:invert"
+                className="group-hover:invert w-[56px] h-[56px]"
               />
               <p>{category.subhead}</p>
             </div>
           ))}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full my-7 md:justify-items-stretch justify-items-center ">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div
               key={product.id}
               className="w-[80vw] my-5 md:w-auto md:h-auto bg-white pb-2 rounded-md shadow-sm"
