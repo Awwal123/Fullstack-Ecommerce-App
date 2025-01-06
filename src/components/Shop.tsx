@@ -44,8 +44,25 @@ import VersaceDylna from "../assets/images/Categories/VersaceDylan-per.png";
 import PurplePerf from "../assets/images/Categories/Purple-pef.png";
 import NiveaDryImpact from "../assets/images/Categories/NIVEADryimpact-pef.png";
 import EmperMemories from "../assets/images/Categories/Emper_Memories-pef.png";
+import AppleWristWatch from "../assets/images/Categories/apple-wristwatch-wt.png";
+import GoldenRolex from "../assets/images/Categories/GoldenRolex.png";
+import SilverRolex from "../assets/images/Categories/SilverRolex.png";
+import EdificeWatch from "../assets/images/Categories/ediffice-wt.png";
+import BrownLeatherWatch from "../assets/images/Categories/wrist-watch-wt.png";
+import FoldingScreenCamera from "../assets/images/Categories/R103.0InchHDFoldingScreen-cam.png";
+import DigitalCamcorder from "../assets/images/Categories/FullHDDigitalVideoCamcorder-cam.png";
+import CompactCamera1 from "../assets/images/Categories/camera-cam.png";
+import CompactCamera2 from "../assets/images/Categories/camera-cam2.png";
+import BlackOverEarHeadphones from "../assets/images/Categories/HeadPhone.png";
+import HeadphonesWithMicrophone from "../assets/images/Categories/Headphone-1.png";
+import WirelessHeadphones from "../assets/images/Categories/Headphone-2.png";
+import DualShockController from "../assets/images/Categories/gamepad-pad.png";
+import JoystickController from "../assets/images/Categories/joystick-pad.png";
+import PS4GamingSet from "../assets/images/Categories/PS4.png";
+import PS5GamingSet from "../assets/images/Categories/PS5.png";
+import Pad from "../assets/images/Categories/WiredPad.png"
 
-
+import { ScrollToTop } from "./ScrollToTop";
 const products = [
   {
     id: 130,
@@ -58,17 +75,7 @@ const products = [
     rating: 5,
     ratingCount: 330,
   },
-  {
-    id: 153,
-    name: "Strawberry",
-    imgUrl: Strawberry,
-    category: "Fgroceries",
-    details: "Juicy and sweet strawberries, perfect for desserts.",
-    price: 5,
-    rating: 4.9,
-    ratingCount: 160,
-},
-
+ 
   {
     id: 133,
     name: "iPhone 14 Pro Max",
@@ -80,17 +87,6 @@ const products = [
     rating: 5,
     ratingCount: 400,
   },
- 
-  {
-    id: 148,
-    name: "Banana",
-    imgUrl: Banana,
-    category:"groceries",
-    details: "Sweet and ripe bananas, perfect for snacking.",
-    price: 2,
-    rating: 5,
-    ratingCount: 180,
-},
   {
     id: 135,
     name: "Samsung Galaxy A06",
@@ -104,7 +100,7 @@ const products = [
   },
   {
     id: 136,
-    name: "iPhone 5s",
+    name: "iPhone 6s",
     price: 200,
     imgUrl: Iphone5s,
     category: "Phone",
@@ -113,6 +109,108 @@ const products = [
     rating: 4,
     ratingCount: 220,
   },
+  {
+    id: 153,
+    name: "Strawberry",
+    imgUrl: Strawberry,
+    category: "Fgroceries",
+    details: "Juicy and sweet strawberries, perfect for desserts.",
+    price: 5,
+    rating: 4,
+    ratingCount: 160,
+  },
+
+  {
+    id: 148,
+    name: "Banana",
+    imgUrl: Banana,
+    category: "groceries",
+    details: "Sweet and ripe bananas, perfect for snacking.",
+    price: 2,
+    rating: 5,
+    ratingCount: 180,
+  },
+  {
+    id: 154,
+    name: "Nescafe Coffee",
+    imgUrl: Nescafe,
+    category: "groceries",
+    details:
+      "Rich and aromatic Nescafe coffee for a perfect start to your day.",
+    price: 8,
+    rating: 4.5,
+    ratingCount: 220,
+  },
+  {
+    id: 151,
+    name: "Egg",
+    imgUrl: Egg,
+    category: "groceries",
+    details: "Farm-fresh eggs perfect for cooking and baking.",
+    price: 2.5,
+    rating: 4,
+    ratingCount: 300,
+  },
+  {
+    id: 157,
+    name: "David off",
+    imgUrl: DavidoOff,
+    category: "Fragrance",
+    details: "Elegant and iconic, perfect for evening wear.",
+    price: 50,
+    rating: 5,
+    ratingCount: 150,
+  },
+  {
+    id: 158,
+    name: "Ocean Breeze",
+    imgUrl: BlackPerfume,
+    category: "Fragrance",
+    details: "Mystical and bold fragrance to make a statement.",
+    price: 55,
+    rating: 4,
+    ratingCount: 180,
+  },
+  {
+    id: 159,
+    name: "Tommy Perfume",
+    imgUrl: Tommy,
+    category: "Fragrance",
+    details: "Classic and sophisticated, perfect for daily wear.",
+    price: 40,
+    rating: 4.5,
+    ratingCount: 250,
+  },
+  {
+    id: 160,
+    name: "Versace Dylan",
+    imgUrl: VersaceDylna,
+    category: "Fragrance",
+    details: "Luxury and charm combined in a signature scent.",
+    price: 60,
+    rating: 5,
+    ratingCount: 300,
+  },
+  {
+    id: 166,
+    name: "Silver Rolex",
+    imgUrl: SilverRolex,
+    category: "Smartwatch",
+    details: "Stylish silver smartwatch with sleek aesthetics.",
+    price: 400,
+    rating: 5,
+    ratingCount: 300,
+  },
+  {
+    id: 179,
+    name: "PS5 Gaming Set",
+    imgUrl: PS5GamingSet,
+    category: "Gaming",
+    details: "Advanced PS5 gaming set with state-of-the-art controllers.",
+    price: 600,
+    rating: 5,
+    ratingCount: 700,
+},
   {
     id: 137,
     name: "Tecno Pop 9",
@@ -135,16 +233,7 @@ const products = [
     rating: 4.5,
     ratingCount: 200,
   },
-  {
-    id: 154,
-    name: "Nescafe Coffee",
-    imgUrl: Nescafe,
-    category: "groceries",
-    details: "Rich and aromatic Nescafe coffee for a perfect start to your day.",
-    price: 8,
-    rating: 4.5,
-    ratingCount: 220,
-},
+
   {
     id: 140,
     name: "Apple MacBook Pro",
@@ -167,16 +256,7 @@ const products = [
     rating: 5,
     ratingCount: 480,
   },
-  {
-    id: 151,
-    name: "Egg",
-    imgUrl: Egg,
-    category: "groceries",
-    details: "Farm-fresh eggs perfect for cooking and baking.",
-    price: 2.5,
-    rating: 4,
-    ratingCount: 300,
-},
+ 
 
   {
     id: 143,
@@ -198,8 +278,7 @@ const products = [
     price: 15,
     rating: 5,
     ratingCount: 120,
-},
-
+  },
 
   {
     id: 145,
@@ -210,8 +289,8 @@ const products = [
     price: 3,
     rating: 5,
     ratingCount: 200,
-},
-{
+  },
+  {
     id: 146,
     name: "Mixed Fruits",
     imgUrl: fruits,
@@ -220,8 +299,8 @@ const products = [
     price: 5,
     rating: 4.5,
     ratingCount: 150,
-},
-{
+  },
+  {
     id: 147,
     name: "Dog Food",
     imgUrl: DogFoood,
@@ -230,8 +309,8 @@ const products = [
     price: 20,
     rating: 4.5,
     ratingCount: 100,
-},
-{
+  },
+  {
     id: 142,
     name: "HP EliteBook 840 G5",
     imgUrl: HpEliteBook840G5,
@@ -254,7 +333,7 @@ const products = [
     ratingCount: 350,
   },
 
-{
+  {
     id: 149,
     name: "Tin Tomato",
     imgUrl: TinTomato,
@@ -263,9 +342,9 @@ const products = [
     price: 1.5,
     rating: 5,
     ratingCount: 250,
-},
+  },
 
-{
+  {
     id: 152,
     name: "Milk",
     imgUrl: Milk,
@@ -274,9 +353,9 @@ const products = [
     price: 3,
     rating: 4,
     ratingCount: 210,
-},
+  },
 
-{
+  {
     id: 131,
     name: "Apple iPad Pro 11",
     price: 700,
@@ -287,7 +366,7 @@ const products = [
     rating: 4.5,
     ratingCount: 210,
   },
-   
+
   {
     id: 132,
     name: "iPhone 13 Pro",
@@ -300,7 +379,7 @@ const products = [
     ratingCount: 290,
   },
 
-{
+  {
     id: 155,
     name: "Rice",
     imgUrl: Rice,
@@ -309,8 +388,8 @@ const products = [
     price: 10,
     rating: 4,
     ratingCount: 310,
-},
-{
+  },
+  {
     id: 144,
     name: "Lenovo IdeaPad 15",
     imgUrl: LenovoideaPad,
@@ -330,48 +409,9 @@ const products = [
     price: 45,
     rating: 4.5,
     ratingCount: 200,
-},
-{
-    id: 157,
-    name: "David off",
-    imgUrl: DavidoOff,
-    category: "Fragrance",
-    details: "Elegant and iconic, perfect for evening wear.",
-    price: 50,
-    rating: 5,
-    ratingCount: 150,
-},
-{
-    id: 158,
-    name: "Ocean Breeze",
-    imgUrl: BlackPerfume,
-    category: "Fragrance",
-    details: "Mystical and bold fragrance to make a statement.",
-    price: 55,
-    rating: 4,
-    ratingCount: 180,
-},
-{
-    id: 159,
-    name: "Tommy Perfume",
-    imgUrl: Tommy,
-    category: "Fragrance",
-    details: "Classic and sophisticated, perfect for daily wear.",
-    price: 40,
-    rating: 4.5,
-    ratingCount: 250,
-},
-{
-    id: 160,
-    name: "Versace Dylan",
-    imgUrl: VersaceDylna,
-    category: "Fragrance",
-    details: "Luxury and charm combined in a signature scent.",
-    price: 60,
-    rating: 5,
-    ratingCount: 300,
-},
-{
+  },
+  
+  {
     id: 161,
     name: "Midnight Whisper",
     imgUrl: PurplePerf,
@@ -380,8 +420,8 @@ const products = [
     price: 38,
     rating: 4,
     ratingCount: 120,
-},
-{
+  },
+  {
     id: 162,
     name: "Nivea Dry Impact",
     imgUrl: NiveaDryImpact,
@@ -390,8 +430,8 @@ const products = [
     price: 35,
     rating: 4.5,
     ratingCount: 210,
-},
-{
+  },
+  {
     id: 163,
     name: "Emper Memories for Women",
     imgUrl: EmperMemories,
@@ -400,9 +440,161 @@ const products = [
     price: 42,
     rating: 5,
     ratingCount: 190,
+  },
+  {
+    id: 164,
+    name: "Apple Wrist Watch",
+    imgUrl: AppleWristWatch,
+    category: "Smartwatch",
+    details: "High-tech Apple wristwatch with advanced features.",
+    price: 350,
+    rating: 5,
+    ratingCount: 400,
+  },
+  {
+    id: 165,
+    name: "Golden Rolex",
+    imgUrl: GoldenRolex,
+    category: "Smartwatch",
+    details: "Elegant golden smartwatch with premium design.",
+    price: 450,
+    rating: 4.5,
+    ratingCount: 250,
+  },
+
+  {
+    id: 167,
+    name: "Edifice Watch",
+    imgUrl: EdificeWatch,
+    category: "Smartwatch",
+    details: "Modern smartwatch with robust build and features.",
+    price: 200,
+    rating: 4,
+    ratingCount: 180,
+  },
+  {
+    id: 168,
+    name: "Brown Leather Watch",
+    imgUrl: BrownLeatherWatch,
+    category: "Smartwatch",
+    details: "Classic brown leather smartwatch for all occasions.",
+    price: 250,
+    rating: 4.5,
+    ratingCount: 220,
+  },
+  {
+    id: 169,
+    name: "Folding Screen Camera",
+    imgUrl: FoldingScreenCamera,
+    category: "Camera",
+    details: "High-definition folding screen camera for professional use.",
+    price: 300,
+    rating: 4.5,
+    ratingCount: 150,
+  },
+  {
+    id: 170,
+    name: "Digital Camcorder",
+    imgUrl: DigitalCamcorder,
+    category: "Camera",
+    details: "Full HD digital camcorder for capturing stunning videos.",
+    price: 350,
+    rating: 5,
+    ratingCount: 200,
+  },
+  {
+    id: 171,
+    name: "Compact Camera 1",
+    imgUrl: CompactCamera1,
+    category: "Camera",
+    details: "Lightweight compact camera for everyday photography.",
+    price: 200,
+    rating: 4.5,
+    ratingCount: 120,
+  },
+  {
+    id: 172,
+    name: "Compact Camera 2",
+    imgUrl: CompactCamera2,
+    category: "Camera",
+    details: "Portable compact camera with enhanced features.",
+    price: 220,
+    rating: 4,
+    ratingCount: 140,
+  },
+  {
+    id: 173,
+    name: "Black Over-Ear Headphones",
+    imgUrl: BlackOverEarHeadphones,
+    category: "Headphones",
+    details: "Premium black over-ear headphones for immersive sound.",
+    price: 150,
+    rating: 4,
+    ratingCount: 300,
+  },
+  {
+    id: 174,
+    name: "Headphones with Microphone",
+    imgUrl: HeadphonesWithMicrophone,
+    category: "Headphones",
+    details: "Versatile headphones with built-in microphone.",
+    price: 120,
+    rating: 4,
+    ratingCount: 250,
+  },
+  {
+    id: 175,
+    name: "Wireless Headphones",
+    imgUrl: WirelessHeadphones,
+    category: "Headphones",
+    details:
+      "Wireless headphones with excellent battery life and sound quality.",
+    price: 180,
+    rating: 5,
+    ratingCount: 320,
+  },
+  {
+    id: 176,
+    name: "DualShock Controller",
+    imgUrl: DualShockController,
+    category: "Gaming",
+    details: "Ergonomic gamepad for immersive gaming sessions.",
+    price: 70,
+    rating: 4,
+    ratingCount: 450,
+},
+{
+    id: 177,
+    name: "Joystick Controller",
+    imgUrl: JoystickController,
+    category: "Gaming",
+    details: "Classic joystick controller for retro and modern games.",
+    price: 50,
+    rating: 4.5,
+    ratingCount: 300,
+},
+{
+    id: 178,
+    name: "PS4 Gaming Set",
+    imgUrl: PS4GamingSet,
+    category: "Gaming",
+    details: "Complete PS4 gaming set with controllers and accessories.",
+    price: 400,
+    rating: 4,
+    ratingCount: 520,
 },
 
-
+  {
+    id: 101,
+    name: "HAVIT HV-G92 Gamepad",
+    price: 120,
+    imgUrl: Pad,
+    details:
+      "Ensures the links are crawlable by search engines (important if you use server-side rendering or prerendering",
+    category: "Gaming",
+    rating: 5,
+    ratingCount: 120,
+  },
 ];
 
 const categories = [
@@ -549,6 +741,7 @@ export const Shop = () => {
           ))}
         </div>
       </div>
+      <ScrollToTop />
     </>
   );
 };

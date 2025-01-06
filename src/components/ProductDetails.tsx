@@ -66,6 +66,22 @@ import VersaceDylna from "../assets/images/Categories/VersaceDylan-per.png";
 import PurplePerf from "../assets/images/Categories/Purple-pef.png";
 import NiveaDryImpact from "../assets/images/Categories/NIVEADryimpact-pef.png";
 import EmperMemories from "../assets/images/Categories/Emper_Memories-pef.png";
+import AppleWristWatch from "../assets/images/Categories/apple-wristwatch-wt.png";
+import GoldenRolex from "../assets/images/Categories/GoldenRolex.png";
+import SilveRolex from "../assets/images/Categories/SilverRolex.png";
+import EdificeWatch from "../assets/images/Categories/ediffice-wt.png";
+import BrownLeatherWatch from "../assets/images/Categories/wrist-watch-wt.png";
+import FoldingScreenCamera from "../assets/images/Categories/R103.0InchHDFoldingScreen-cam.png";
+import DigitalCamcorder from "../assets/images/Categories/FullHDDigitalVideoCamcorder-cam.png";
+import CompactCamera1 from "../assets/images/Categories/camera-cam.png";
+import CompactCamera2 from "../assets/images/Categories/camera-cam2.png";
+import BlackOverEarHeadphones from "../assets/images/Categories/HeadPhone.png";
+import HeadphonesWithMicrophone from "../assets/images/Categories/Headphone-1.png";
+import WirelessHeadphones from "../assets/images/Categories/Headphone-2.png";
+import DualShockController from "../assets/images/Categories/gamepad-pad.png";
+import JoystickController from "../assets/images/Categories/joystick-pad.png";
+import PS4GamingSet from "../assets/images/Categories/PS4.png";
+import PS5GamingSet from "../assets/images/Categories/PS5.png";
 import { useCart } from "./CartContext";
 import { useParams } from "react-router-dom";
 
@@ -749,6 +765,179 @@ const products = [
   rating: 5,
   ratingCount: 190,
 },
+{
+  id: 164,
+  name: "Apple Wrist Watch",
+  imgUrl: AppleWristWatch,
+  category: "Smartwatch",
+  description: "High-tech Apple wristwatch with advanced features.",
+  price: 350,
+  rating: 5,
+  ratingCount: 400,
+},
+{
+  id: 165,
+  name: "Golden Rolex",
+  imgUrl: GoldenRolex,
+  category: "Smartwatch",
+  description: "Elegant golden smartwatch with premium design.",
+  price: 450,
+  rating: 4.5,
+  ratingCount: 250,
+},
+{
+  id: 166,
+  name: "Silver Rolex",
+  imgUrl: SilveRolex,
+  category: "Smartwatch",
+  description: "Stylish silver smartwatch with sleek aesthetics.",
+  price: 400,
+  rating: 5,
+  ratingCount: 300,
+},
+{
+  id: 167,
+  name: "Edifice Watch",
+  imgUrl: EdificeWatch,
+  category: "Smartwatch",
+  description: "Modern smartwatch with robust build and features.",
+  price: 200,
+  rating: 4,
+  ratingCount: 180,
+},
+{
+  id: 168,
+  name: "Brown Leather Watch",
+  imgUrl: BrownLeatherWatch,
+  category: "Smartwatch",
+  description: "Classic brown leather smartwatch for all occasions.",
+  price: 250,
+  rating: 4.5,
+  ratingCount: 220,
+},
+{
+  id: 169,
+  name: "Folding Screen Camera",
+  imgUrl: FoldingScreenCamera,
+  category: "Camera",
+  description: "High-definition folding screen camera for professional use.",
+  price: 300,
+  rating: 4.5,
+  ratingCount: 150,
+},
+{
+  id: 170,
+  name: "Digital Camcorder",
+  imgUrl: DigitalCamcorder,
+  category: "Camera",
+  description: "Full HD digital camcorder for capturing stunning videos.",
+  price: 350,
+  rating: 5,
+  ratingCount: 200,
+},
+{
+  id: 171,
+  name: "Compact Camera 1",
+  imgUrl: CompactCamera1,
+  category: "Camera",
+  description: "Lightweight compact camera for everyday photography.",
+  price: 200,
+  rating: 4.5,
+  ratingCount: 120,
+},
+{
+  id: 172,
+  name: "Compact Camera 2",
+  imgUrl: CompactCamera2,
+  category: "Camera",
+  description: "Portable compact camera with enhanced features.",
+  price: 220,
+  rating: 4,
+  ratingCount: 140,
+},
+{
+  id: 173,
+  name: "Black Over-Ear Headphones",
+  imgUrl: BlackOverEarHeadphones,
+  category: "Headphones",
+  description: "Premium black over-ear headphones for immersive sound.",
+  price: 150,
+  rating: 4.5,
+  ratingCount: 300,
+},
+{
+  id: 174,
+  name: "Headphones with Microphone",
+  imgUrl: HeadphonesWithMicrophone,
+  category: "Headphones",
+  description: "Versatile headphones with built-in microphone.",
+  price: 120,
+  rating: 4,
+  ratingCount: 250,
+},
+{
+  id: 175,
+  name: "Wireless Headphones",
+  imgUrl: WirelessHeadphones,
+  category: "Headphones",
+  description:
+    "Wireless headphones with excellent battery life and sound quality.",
+  price: 180,
+  rating: 5,
+  ratingCount: 320,
+},
+{
+  id: 177,
+  name: "Joystick Controller",
+  imgUrl: JoystickController,
+  category: "Gaming",
+  details: "Classic joystick controller for retro and modern games.",
+  price: 50,
+  rating: 4.5,
+  ratingCount: 300,
+},
+{
+  id: 176,
+  name: "DualShock Controller",
+  imgUrl: DualShockController,
+  category: "Gaming",
+  details: "Ergonomic gamepad for immersive gaming sessions.",
+  price: 70,
+  rating: 4,
+  ratingCount: 450,
+},
+{
+  id: 178,
+  name: "PS4 Gaming Set",
+  imgUrl: PS4GamingSet,
+  category: "Gaming",
+  details: "Complete PS4 gaming set with controllers and accessories.",
+  price: 400,
+  rating: 4,
+  ratingCount: 520,
+},
+{
+  id: 179,
+  name: "PS5 Gaming Set",
+  imgUrl: PS5GamingSet,
+  category: "Gaming",
+  details: "Advanced PS5 gaming set with state-of-the-art controllers.",
+  price: 600,
+  rating: 5,
+  ratingCount: 700,
+},
+{
+  id: 101,
+  name: "HAVIT HV-G92 Gamepad",
+  price: 120,
+  imgUrl: Pad,
+  details:
+    "Ensures the links are crawlable by search engines (important if you use server-side rendering or prerendering",
+  category: "Gaming",
+  rating: 5,
+  ratingCount: 120,
+},
+
 ];
 
 export const ProductDetails = () => {
