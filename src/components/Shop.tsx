@@ -25,6 +25,26 @@ import DellLatitude7400TouchScreen from "../assets/images/Categories/DELLLatitud
 import HpEliteBook840G5 from "../assets/images/Categories/HpEliteBook840G5-com.png";
 import HpNoteBook348G5 from "../assets/images/Categories/HpNoteBook348G5-com.png";
 import LenovoideaPad from "../assets/images/Categories/Lenovoideapad15-com.png";
+import Apple from "../assets/images/Categories/Apple.png";
+import fruits from "../assets/images/Categories/fruit-go.png";
+import DogFoood from "../assets/images/Categories/DogFood.png";
+import Banana from "../assets/images/Categories/banana-go.png";
+import TinTomato from "../assets/images/Categories/Can-tomato-go.png";
+import CatFood from "../assets/images/Categories/Catfood.png";
+import Egg from "../assets/images/Categories/Eggs.png";
+import Milk from "../assets/images/Categories/Milk.png";
+import Strawberry from "../assets/images/Categories/Strawbeery.png";
+import Nescafe from "../assets/images/Categories/Nescafe Coffe.png";
+import Rice from "../assets/images/Categories/Rice.png";
+import BluePerfume from "../assets/images/Categories/blue-pef.png";
+import DavidoOff from "../assets/images/Categories/Davidoff-per.png";
+import BlackPerfume from "../assets/images/Categories/black-pef.png";
+import Tommy from "../assets/images/Categories/Tommy-pef.png";
+import VersaceDylna from "../assets/images/Categories/VersaceDylan-per.png";
+import PurplePerf from "../assets/images/Categories/Purple-pef.png";
+import NiveaDryImpact from "../assets/images/Categories/NIVEADryimpact-pef.png";
+import EmperMemories from "../assets/images/Categories/Emper_Memories-pef.png";
+
 
 const products = [
   {
@@ -39,27 +59,16 @@ const products = [
     ratingCount: 330,
   },
   {
-    id: 131,
-    name: "Apple iPad Pro 11",
-    price: 700,
-    imgUrl: AppleIpadpro11,
-    category: "Tablet",
-    details:
-      "High-performance iPad with an 11-inch display, perfect for professionals and creatives.",
-    rating: 4.5,
-    ratingCount: 210,
-  },
-  {
-    id: 132,
-    name: "iPhone 13 Pro",
-    price: 600,
-    imgUrl: Iphone13Pro,
-    category: "Phone",
-    details:
-      "A powerful smartphone with advanced features, ideal for photography and multitasking.",
-    rating: 4,
-    ratingCount: 290,
-  },
+    id: 153,
+    name: "Strawberry",
+    imgUrl: Strawberry,
+    category: "Fgroceries",
+    details: "Juicy and sweet strawberries, perfect for desserts.",
+    price: 5,
+    rating: 4.9,
+    ratingCount: 160,
+},
+
   {
     id: 133,
     name: "iPhone 14 Pro Max",
@@ -71,17 +80,17 @@ const products = [
     rating: 5,
     ratingCount: 400,
   },
+ 
   {
-    id: 134,
-    name: "iPhone X",
-    price: 400,
-    imgUrl: IphoneX,
-    category: "Phone",
-    details:
-      "Revolutionary iPhone with a stunning OLED display and Face ID technology.",
-    rating: 4.5,
-    ratingCount: 350,
-  },
+    id: 148,
+    name: "Banana",
+    imgUrl: Banana,
+    category:"groceries",
+    details: "Sweet and ripe bananas, perfect for snacking.",
+    price: 2,
+    rating: 5,
+    ratingCount: 180,
+},
   {
     id: 135,
     name: "Samsung Galaxy A06",
@@ -127,6 +136,16 @@ const products = [
     ratingCount: 200,
   },
   {
+    id: 154,
+    name: "Nescafe Coffee",
+    imgUrl: Nescafe,
+    category: "groceries",
+    details: "Rich and aromatic Nescafe coffee for a perfect start to your day.",
+    price: 8,
+    rating: 4.5,
+    ratingCount: 220,
+},
+  {
     id: 140,
     name: "Apple MacBook Pro",
     imgUrl: AppleMacBookPro,
@@ -149,16 +168,16 @@ const products = [
     ratingCount: 480,
   },
   {
-    id: 142,
-    name: "HP EliteBook 840 G5",
-    imgUrl: HpEliteBook840G5,
-    category: "Computer",
-    details:
-      "High-performance laptop with robust security features for enterprise users.",
-    price: 950,
+    id: 151,
+    name: "Egg",
+    imgUrl: Egg,
+    category: "groceries",
+    details: "Farm-fresh eggs perfect for cooking and baking.",
+    price: 2.5,
     rating: 4,
-    ratingCount: 430,
-  },
+    ratingCount: 300,
+},
+
   {
     id: 143,
     name: "HP Notebook 348 G5",
@@ -171,6 +190,127 @@ const products = [
     ratingCount: 390,
   },
   {
+    id: 150,
+    name: "Cat Food",
+    imgUrl: CatFood,
+    category: "groceries",
+    details: "Healthy and delicious food for your cat.",
+    price: 15,
+    rating: 5,
+    ratingCount: 120,
+},
+
+
+  {
+    id: 145,
+    name: "Apple",
+    imgUrl: Apple,
+    category: "groceries",
+    details: "Fresh and crispy apples perfect for snacks and desserts.",
+    price: 3,
+    rating: 5,
+    ratingCount: 200,
+},
+{
+    id: 146,
+    name: "Mixed Fruits",
+    imgUrl: fruits,
+    category: "groceries",
+    details: "A delightful mix of fresh seasonal fruits.",
+    price: 5,
+    rating: 4.5,
+    ratingCount: 150,
+},
+{
+    id: 147,
+    name: "Dog Food",
+    imgUrl: DogFoood,
+    category: "groceries",
+    details: "Nutritious dog food for a healthy and happy pet.",
+    price: 20,
+    rating: 4.5,
+    ratingCount: 100,
+},
+{
+    id: 142,
+    name: "HP EliteBook 840 G5",
+    imgUrl: HpEliteBook840G5,
+    category: "Computer",
+    details:
+      "High-performance laptop with robust security features for enterprise users.",
+    price: 950,
+    rating: 4,
+    ratingCount: 430,
+  },
+  {
+    id: 134,
+    name: "iPhone X",
+    price: 400,
+    imgUrl: IphoneX,
+    category: "Phone",
+    details:
+      "Revolutionary iPhone with a stunning OLED display and Face ID technology.",
+    rating: 4.5,
+    ratingCount: 350,
+  },
+
+{
+    id: 149,
+    name: "Tin Tomato",
+    imgUrl: TinTomato,
+    category: "groceries",
+    details: "High-quality canned tomatoes, ideal for cooking.",
+    price: 1.5,
+    rating: 5,
+    ratingCount: 250,
+},
+
+{
+    id: 152,
+    name: "Milk",
+    imgUrl: Milk,
+    category: "groceries",
+    details: "Fresh and creamy milk, great for your daily needs.",
+    price: 3,
+    rating: 4,
+    ratingCount: 210,
+},
+
+{
+    id: 131,
+    name: "Apple iPad Pro 11",
+    price: 700,
+    imgUrl: AppleIpadpro11,
+    category: "Tablet",
+    details:
+      "High-performance iPad with an 11-inch display, perfect for professionals and creatives.",
+    rating: 4.5,
+    ratingCount: 210,
+  },
+   
+  {
+    id: 132,
+    name: "iPhone 13 Pro",
+    price: 600,
+    imgUrl: Iphone13Pro,
+    category: "Phone",
+    details:
+      "A powerful smartphone with advanced features, ideal for photography and multitasking.",
+    rating: 4,
+    ratingCount: 290,
+  },
+
+{
+    id: 155,
+    name: "Rice",
+    imgUrl: Rice,
+    category: "groceries",
+    details: "High-quality rice, ideal for everyday meals.",
+    price: 10,
+    rating: 4,
+    ratingCount: 310,
+},
+{
     id: 144,
     name: "Lenovo IdeaPad 15",
     imgUrl: LenovoideaPad,
@@ -181,7 +321,88 @@ const products = [
     rating: 4.5,
     ratingCount: 350,
   },
-  
+  {
+    id: 156,
+    name: "Amber Mystique",
+    imgUrl: BluePerfume,
+    category: "Fragrance",
+    details: "A fresh and long-lasting blue fragrance for every occasion.",
+    price: 45,
+    rating: 4.5,
+    ratingCount: 200,
+},
+{
+    id: 157,
+    name: "David off",
+    imgUrl: DavidoOff,
+    category: "Fragrance",
+    details: "Elegant and iconic, perfect for evening wear.",
+    price: 50,
+    rating: 5,
+    ratingCount: 150,
+},
+{
+    id: 158,
+    name: "Ocean Breeze",
+    imgUrl: BlackPerfume,
+    category: "Fragrance",
+    details: "Mystical and bold fragrance to make a statement.",
+    price: 55,
+    rating: 4,
+    ratingCount: 180,
+},
+{
+    id: 159,
+    name: "Tommy Perfume",
+    imgUrl: Tommy,
+    category: "Fragrance",
+    details: "Classic and sophisticated, perfect for daily wear.",
+    price: 40,
+    rating: 4.5,
+    ratingCount: 250,
+},
+{
+    id: 160,
+    name: "Versace Dylan",
+    imgUrl: VersaceDylna,
+    category: "Fragrance",
+    details: "Luxury and charm combined in a signature scent.",
+    price: 60,
+    rating: 5,
+    ratingCount: 300,
+},
+{
+    id: 161,
+    name: "Midnight Whisper",
+    imgUrl: PurplePerf,
+    category: "Fragrance",
+    details: "A sweet and floral scent, ideal for sunny days.",
+    price: 38,
+    rating: 4,
+    ratingCount: 120,
+},
+{
+    id: 162,
+    name: "Nivea Dry Impact",
+    imgUrl: NiveaDryImpact,
+    category: "Fragrance",
+    details: "Refreshing and clean, keeps you fresh all day.",
+    price: 35,
+    rating: 4.5,
+    ratingCount: 210,
+},
+{
+    id: 163,
+    name: "Emper Memories for Women",
+    imgUrl: EmperMemories,
+    category: "Fragrance",
+    details: "Nostalgic and warm, a unique scent for special moments.",
+    price: 42,
+    rating: 5,
+    ratingCount: 190,
+},
+
+
 ];
 
 const categories = [

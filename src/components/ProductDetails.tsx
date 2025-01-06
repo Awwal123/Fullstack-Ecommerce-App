@@ -47,6 +47,25 @@ import HpEliteBook840G5 from "../assets/images/Categories/HpEliteBook840G5-com.p
 import HpNoteBook348G5 from "../assets/images/Categories/HpNoteBook348G5-com.png";
 import LenovoideaPad from "../assets/images/Categories/Lenovoideapad15-com.png"
 import bag from "../assets/images/GucciHandbag.png";
+import Apple from "../assets/images/Categories/Apple.png";
+import fruits from "../assets/images/Categories/fruit-go.png";
+import DogFoood from "../assets/images/Categories/DogFood.png";
+import Banana from "../assets/images/Categories/banana-go.png";
+import TinTomato from "../assets/images/Categories/Can-tomato-go.png";
+import CatFood from "../assets/images/Categories/Catfood.png";
+import Egg from "../assets/images/Categories/Eggs.png";
+import Milk from "../assets/images/Categories/Milk.png";
+import Strawberry from "../assets/images/Categories/Strawbeery.png";
+import Nescafe from "../assets/images/Categories/Nescafe Coffe.png";
+import Rice from "../assets/images/Categories/Rice.png"
+import BluePerfume from "../assets/images/Categories/blue-pef.png";
+import DavidoOff from "../assets/images/Categories/Davidoff-per.png";
+import BlackPerfume from "../assets/images/Categories/black-pef.png";
+import Tommy from "../assets/images/Categories/Tommy-pef.png";
+import VersaceDylna from "../assets/images/Categories/VersaceDylan-per.png";
+import PurplePerf from "../assets/images/Categories/Purple-pef.png";
+import NiveaDryImpact from "../assets/images/Categories/NIVEADryimpact-pef.png";
+import EmperMemories from "../assets/images/Categories/Emper_Memories-pef.png";
 import { useCart } from "./CartContext";
 import { useParams } from "react-router-dom";
 
@@ -539,6 +558,196 @@ const products = [
   price: 550,
   rating: 4.5,
   ratingCount: 350,
+},
+{
+  id: 145,
+  name: "Apple",
+  imgUrl: Apple,
+  category: "groceries",
+  description: "Fresh and crispy apples perfect for snacks and desserts.",
+  price: 3,
+  rating: 5,
+  ratingCount: 200,
+},
+{
+  id: 146,
+  name: "Mixed Fruits",
+  imgUrl: fruits,
+  category: "groceries",
+  description: "A delightful mix of fresh seasonal fruits.",
+  price: 5,
+  rating: 4.5,
+  ratingCount: 150,
+},
+{
+  id: 147,
+  name: "Dog Food",
+  imgUrl: DogFoood,
+  category: "groceries",
+  description: "Nutritious dog food for a healthy and happy pet.",
+  price: 20,
+  rating: 4.5,
+  ratingCount: 100,
+},
+{
+  id: 148,
+  name: "Banana",
+  imgUrl: Banana,
+  category:"groceries",
+  description: "Sweet and ripe bananas, perfect for snacking.",
+  price: 2,
+  rating: 5,
+  ratingCount: 180,
+},
+{
+  id: 149,
+  name: "Tin Tomato",
+  imgUrl: TinTomato,
+  category: "groceries",
+  description: "High-quality canned tomatoes, ideal for cooking.",
+  price: 1.5,
+  rating: 5,
+  ratingCount: 250,
+},
+{
+  id: 150,
+  name: "Cat Food",
+  imgUrl: CatFood,
+  category: "groceries",
+  description: "Healthy and delicious food for your cat.",
+  price: 15,
+  rating: 5,
+  ratingCount: 120,
+},
+{
+  id: 151,
+  name: "Egg",
+  imgUrl: Egg,
+  category: "groceries",
+  description: "Farm-fresh eggs perfect for cooking and baking.",
+  price: 2.5,
+  rating: 4,
+  ratingCount: 300,
+},
+{
+  id: 152,
+  name: "Milk",
+  imgUrl: Milk,
+  category: "groceries",
+  description: "Fresh and creamy milk, great for your daily needs.",
+  price: 3,
+  rating: 4,
+  ratingCount: 210,
+},
+{
+  id: 153,
+  name: "Strawberry",
+  imgUrl: Strawberry,
+  category: "Fgroceries",
+  description: "Juicy and sweet strawberries, perfect for desserts.",
+  price: 4,
+  rating: 5,
+  ratingCount: 160,
+},
+{
+  id: 154,
+  name: "Nescafe Coffee",
+  imgUrl: Nescafe,
+  category: "groceries",
+  description: "Rich and aromatic Nescafe coffee for a perfect start to your day.",
+  price: 8,
+  rating: 4.5,
+  ratingCount: 220,
+},
+{
+  id: 155,
+  name: "Rice",
+  imgUrl: Rice,
+  category: "groceries",
+  description: "High-quality rice, ideal for everyday meals.",
+  price: 10,
+  rating: 4,
+  ratingCount: 310,
+},
+{
+  id: 156,
+  name: "Amber Mystique",
+  imgUrl: BluePerfume,
+  category: "Fragrance",
+  description: "A fresh and long-lasting blue fragrance for every occasion.",
+  price: 45,
+  rating: 4.5,
+  ratingCount: 200,
+},
+{
+  id: 157,
+  name: "David off",
+  imgUrl: DavidoOff,
+  category: "Fragrance",
+  description: "Elegant and iconic, perfect for evening wear.",
+  price: 50,
+  rating: 5,
+  ratingCount: 150,
+},
+{
+  id: 158,
+  name: "Ocean Breeze",
+  imgUrl: BlackPerfume,
+  category: "Fragrance",
+  description: "Mystical and bold fragrance to make a statement.",
+  price: 55,
+  rating: 4,
+  ratingCount: 180,
+},
+{
+  id: 159,
+  name: "Tommy Perfume",
+  imgUrl: Tommy,
+  category: "Fragrance",
+  description: "Classic and sophisticated, perfect for daily wear.",
+  price: 40,
+  rating: 4.5,
+  ratingCount: 250,
+},
+{
+  id: 160,
+  name: "Versace Dylan",
+  imgUrl: VersaceDylna,
+  category: "Fragrance",
+  description: "Luxury and charm combined in a signature scent.",
+  price: 60,
+  rating: 5,
+  ratingCount: 300,
+},
+{
+  id: 161,
+  name: "Midnight Whisper",
+  imgUrl: PurplePerf,
+  category: "Fragrance",
+  description: "A sweet and floral scent, ideal for sunny days.",
+  price: 38,
+  rating: 4,
+  ratingCount: 120,
+},
+{
+  id: 162,
+  name: "Nivea Dry Impact",
+  imgUrl: NiveaDryImpact,
+  category: "Fragrance",
+  description: "Refreshing and clean, keeps you fresh all day.",
+  price: 35,
+  rating: 4.5,
+  ratingCount: 210,
+},
+{
+  id: 163,
+  name: "Emper Memories for Women",
+  imgUrl: EmperMemories,
+  category: "Fragrance",
+  description: "Nostalgic and warm, a unique scent for special moments.",
+  price: 42,
+  rating: 5,
+  ratingCount: 190,
 },
 ];
 
