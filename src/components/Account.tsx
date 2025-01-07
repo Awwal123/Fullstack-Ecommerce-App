@@ -1,7 +1,10 @@
 import { Fade } from "react-awesome-reveal";
 import { ExclusiveNavbar } from "./ExclusiveNavbar";
+import { useCart } from "./CartContext";
+
 
 export const Account = () => {
+const { name, email } = useCart(); 
   return (
     <>
       <ExclusiveNavbar />
@@ -13,7 +16,7 @@ export const Account = () => {
             <p className="text-gray-500">/</p>
             <p>My Account</p>
             </div>
-            <div>Welcome! <span className="text-customRed">Md Rimel</span></div>
+            <div>Welcome! <span className="text-customRed">{name}!</span></div>
           </div>
 
           <div className="flex justify-between w-full  my-9">
@@ -45,14 +48,14 @@ export const Account = () => {
                   <div className="flex w-full flex-col gap-1">
                     <p>First Name</p>
                     <div className="w-full md:w-[90%] h-[50px] bg-gray-200 pl-3 text-gray-600 items-center flex">
-                      Md
+                      {name}
                     </div>
                   </div>
 
                   <div className="flex w-full flex-col gap-1">
                     <p>Last Name</p>
                     <div className="w-full md:w-[90%] h-[50px] bg-gray-200 pl-3 text-gray-600 items-center flex">
-                      Rimel
+                      null
                     </div>
                   </div>
 
@@ -61,8 +64,8 @@ export const Account = () => {
                 <div className="flex flex-col md:flex-row gap-2 justify-between">
                     <div className="flex w-full flex-col gap-1">
                     <p>Email</p>
-                    <input placeholder="rimel1111@gmail.com" type="text" className="w-full md:w-[90%] h-[50px] bg-gray-200 pl-3 text-gray-600 items-center flex">
-                    
+                    <input placeholder={email} type="text" className="w-full md:w-[90%] h-[50px] bg-gray-200 pl-3 text-gray-600 items-center flex">
+                   
                     </input>
                   </div>
 

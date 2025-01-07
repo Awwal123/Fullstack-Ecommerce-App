@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { toast } from "react-toastify";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-import { db } from "./config/firebase"; // Adjust the import path based on your project structure
+import { db } from "./config/firebase"; 
 
 // Defines the structure of cart items
 interface CartItem {
@@ -37,6 +37,10 @@ interface CartContextProps {
   addToWishlist: (product: WishlistItem) => void;
   removeFromWishlist: (id: number) => void;
   total: number;
+  name: string;  // Added user name
+  email: string; // Added user email
+  setName: (name: string) => void;  // Added setName function
+  setEmail: (email: string) => void; 
 }
 
 const CartContext = createContext<CartContextProps | undefined>(undefined);
@@ -56,6 +60,9 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     return savedWishlist ? JSON.parse(savedWishlist) : [];
   });
 
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+
   // Fetch cart items from Firestore on mount
   useEffect(() => {
     if (!userId) return;
@@ -66,6 +73,8 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         const userSnapshot = await getDoc(userDoc);
         if (userSnapshot.exists()) {
           const data = userSnapshot.data();
+          setName(data.name || "");
+          setEmail(data.email || "");
           setCartItems(data.cart || []);
         }
       } catch (error) {
@@ -167,6 +176,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         addToWishlist,
         removeFromWishlist,
         total,
+        name,  // Provided name in context
+        email, // Provided email in context
+        setName,  // Provided setName in context
+        setEmail, // Provided setEmail in context
       }}
     >
       {children}

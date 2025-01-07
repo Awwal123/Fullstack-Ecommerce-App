@@ -711,7 +711,7 @@ export const Shop = () => {
 
                 <div className="absolute top-3 right-3 flex flex-col gap-2">
                   <div className="flex justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
-                    <img src={Favorite} alt="favorite" />
+                    <img src={Favorite} alt="favorite"/>
                   </div>
                 </div>
 

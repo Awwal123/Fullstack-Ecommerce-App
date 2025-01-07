@@ -6,107 +6,124 @@ import Master from "../assets/images/Mastercard.png";
 import Nagad from "../assets/images/Nagad.png";
 import { useCart } from "./CartContext";
 import { toast } from "react-toastify";
+import { useRef, useState } from "react";
 
 export const CheckOut = () => {
   const { cartItems, total } = useCart();
 
+  const firstNameRef = useRef<HTMLInputElement>(null);
+  const streetAddressRef = useRef<HTMLInputElement>(null);
+  const townCityRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleClick = () => {
-    toast.success("Hooray! Your order is on its way.")
-  }
+    if (isSubmitting) return; 
+    setIsSubmitting(true); 
+
+    const isValid =
+      firstNameRef.current?.value &&
+      streetAddressRef.current?.value &&
+      townCityRef.current?.value &&
+      phoneRef.current?.value &&
+      emailRef.current?.value;
+
+    if (!isValid) {
+      toast.error("Please fill in all required fields.");
+      setIsSubmitting(false); 
+      return;
+    }
+
+    
+    toast.success("Hooray! Your order is on its way.");
+
+  
+    if (firstNameRef.current) firstNameRef.current.value = "";
+    if (streetAddressRef.current) streetAddressRef.current.value = "";
+    if (townCityRef.current) townCityRef.current.value = "";
+    if (phoneRef.current) phoneRef.current.value = "";
+    if (emailRef.current) emailRef.current.value = "";
+
+    setIsSubmitting(false); 
+  };
   return (
     <>
       <ExclusiveNavbar />
       <Fade direction="up" duration={2000} triggerOnce>
         <div className="w-full px-5 py-9 md:py-6 md:px-16 my-7">
-          <div className="flex text-sm  gap-4 ">
-            <p className="text-gray-500 md:block hidden">Account </p>
+          {/* Breadcrumb */}
+          <div className="flex text-sm gap-4">
+            <p className="text-gray-500 md:block hidden">Account</p>
             <p className="text-gray-500 md:block hidden">/</p>
-            <p className="text-gray-500 md:block hidden">My Account </p>
+            <p className="text-gray-500 md:block hidden">My Account</p>
             <p className="text-gray-500 md:block hidden">/</p>
-            <p className="text-gray-500">Product </p>
+            <p className="text-gray-500">Product</p>
             <p className="text-gray-500">/</p>
-            <p className="text-gray-500">View Cart </p>
+            <p className="text-gray-500">View Cart</p>
             <p className="text-gray-500">/</p>
             <p>CheckOut</p>
           </div>
 
+      
           <div className="flex gap-9 md:flex-row flex-col my-9 justify-between w-full">
             <div className="flex flex-col gap-5 md:w-[50%] w-full">
               <h1 className="font-medium text-3xl">Billing Details</h1>
 
               <div className="flex flex-col w-full my-3 gap-6">
+              
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
+                  <label htmlFor="firstName" className="text-gray-400">
                     First Name<span className="text-customRed">*</span>
                   </label>
                   <input
                     type="text"
+                    ref={firstNameRef}
                     className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
                   />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
+                  <label htmlFor="streetAddress" className="text-gray-400">
                     Street Address<span className="text-customRed">*</span>
                   </label>
                   <input
                     type="text"
+                    ref={streetAddressRef}
                     className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
                   />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
-                    Apartment, floor, etc. (optional)
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
+                  <label htmlFor="townCity" className="text-gray-400">
                     Town/City<span className="text-customRed">*</span>
                   </label>
                   <input
                     type="text"
+                    ref={townCityRef}
                     className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
                   />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
+                  <label htmlFor="phone" className="text-gray-400">
                     Phone Number<span className="text-customRed">*</span>
                   </label>
                   <input
                     type="text"
+                    ref={phoneRef}
                     className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
                   />
                 </div>
-
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-gray-400">
+                  <label htmlFor="email" className="text-gray-400">
                     Email Address<span className="text-customRed">*</span>
                   </label>
                   <input
                     type="text"
+                    ref={emailRef}
                     className="w-full md:w-[470px] border-none bg-gray-100 h-[50px] rounded-md"
                   />
                 </div>
-              </div>
-              <div className="flex gap-3">
-                <input
-                  type="checkbox"
-                  className="appearance-none border border-gray-300 rounded-md h-6 w-6 bg-gray-100 cursor-pointer checked:bg-customRed checked:border-customRed focus:outline-none focus:ring-2 focus:ring-customRed checked:icon-check"
-                />
-                <p>Save this information for faster check-out next time</p>
               </div>
             </div>
 

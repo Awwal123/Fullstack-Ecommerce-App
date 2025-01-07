@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Magnify from "../assets/images/Magnify.png";
 import Hamburger from "../assets/images/hamburger.png";
 import Closebtn from "../assets/images/CloseIcon.png";
@@ -12,14 +12,34 @@ import logout from "../assets/images/logout.png";
 import Cancel from "../assets/images/cancel.png";
 import Review from "../assets/images/Reviews.png";
 import { useCart } from "./CartContext";
+import { auth } from './config/firebase'; // Adjust the import as needed
+import { signOut } from 'firebase/auth'; 
+
 
 export const ExclusiveNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
+  const navigate = useNavigate()
   const location = useLocation();
   const { pathname } = location;
   const toggleNavbar = () => {
     setIsNavOpen(!isNavOpen);
+  };
+  const handleLogout = async () => {
+    try {
+      // Clear local storage
+      localStorage.removeItem('userUID'); // or other relevant items
+      localStorage.removeItem('cartItems');
+      localStorage.removeItem('wishlistItems');
+
+      
+      await signOut(auth);
+
+     
+      navigate('/login'); 
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
   };
 
   const toggleDropDown = () => {
@@ -37,6 +57,9 @@ export const ExclusiveNavbar = () => {
 
   const userActive = (path: string) =>
     pathname === path ? "bg-customRed rounded-full  w-6 h-6" : "";
+
+  const cartActive = (path: string) => 
+    pathname === path ? "opacity-0" : "";
   return (
     <div>
       <div className="bg-white w-full flex justify-between items-center px-5 py-3 md:py-4 md:px-16 relative">
@@ -125,7 +148,7 @@ export const ExclusiveNavbar = () => {
               {" "}
               <div className="relative">
                 <img src={Cart} alt="c" className="w-6 h-6 cursor-pointer" />
-                <p className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/3 cursor-pointer w-4 h-4 text-center text-xs bg-[#DB4444] text-white rounded-full">
+                <p className={`absolute top-0 right-0 translate-x-1/2 -translate-y-1/3 cursor-pointer w-4 h-4 text-center text-xs bg-[#DB4444] text-white rounded-full ${cartActive("/cart")}`}>
                   {totalCartItems}
                 </p>
               </div>
@@ -173,7 +196,7 @@ export const ExclusiveNavbar = () => {
                     <img src={Review} alt="" className="w-5 h-5" />
                     <p>My Reviews</p>
                   </div>
-                  <div className="flex items-center cursor-pointer gap-2 ">
+                  <div onClick={handleLogout} className="flex items-center cursor-pointer gap-2 ">
                     <img src={logout} alt="" className="w-7 h-7" />
                     <p>Logout</p>
                   </div>

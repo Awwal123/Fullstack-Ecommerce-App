@@ -9,8 +9,29 @@ import { Slider } from "./Slider"
 import { ScrollToTop } from "./ScrollToTop"
 import { WhyChooseUs } from "./WhyChooseUs"
 import { useEffect } from "react"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "./config/firebase"
 
 export const Exclusive = () => {
+
+  useEffect(() => {
+    const fetchUserCart = async () => {
+      const userUID = localStorage.getItem("userUID");
+      if (!userUID) return;
+  
+      const userDocRef = doc(db, "users", userUID);
+      const userSnap = await getDoc(userDocRef);
+  
+      if (userSnap.exists()) {
+        const userData = userSnap.data();
+        localStorage.setItem("userCart", JSON.stringify(userData.cart || []));
+        console.log("Updated cart on home page load:", userData.cart);
+      }
+    };
+  
+    fetchUserCart();
+  }, []);
+  
     const location = useLocation();
 
     useEffect(() => {

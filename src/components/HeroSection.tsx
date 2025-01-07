@@ -12,6 +12,7 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useCart } from "./CartContext";
 
 export const HeroSection = () => {
   const [name, setName] = useState<string>("");
@@ -19,6 +20,7 @@ export const HeroSection = () => {
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
 
+  const { setName: setContextName, setEmail: setContextEmail } = useCart(); 
 
   const saveToFirestore = async (uid: string, userData: object) => {
     try {
@@ -59,6 +61,9 @@ export const HeroSection = () => {
         orders: [],
         wishlist: [],
       });
+
+       setContextName(name);
+      setContextEmail(email);
 
       localStorage.setItem("userUID", user.uid);
       console.log("Setting userUID in localStorage:", user.uid);
