@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Magnify from "../assets/images/Magnify.png";
 import Hamburger from "../assets/images/hamburger.png";
 import Closebtn from "../assets/images/CloseIcon.png";
-// import WishList from "../assets/images/Wishlist.png";
 import Cart from "../assets/images/Cart.png";
 import User from "../assets/images/User.png";
 import Mall from "../assets/images/mallbag.png";
@@ -12,7 +11,7 @@ import logout from "../assets/images/logout.png";
 import Cancel from "../assets/images/cancel.png";
 import Review from "../assets/images/Reviews.png";
 import { useCart } from "./CartContext";
-import { auth } from './config/firebase'; // Adjust the import as needed
+import { auth } from './config/firebase';
 import { signOut } from 'firebase/auth'; 
 
 
@@ -27,15 +26,10 @@ export const ExclusiveNavbar = () => {
   };
   const handleLogout = async () => {
     try {
-      // Clear local storage
-      localStorage.removeItem('userUID'); // or other relevant items
+      localStorage.removeItem('userUID'); 
       localStorage.removeItem('cartItems');
       localStorage.removeItem('wishlistItems');
-
-      
       await signOut(auth);
-
-     
       navigate('/login'); 
     } catch (error) {
       console.error("Error logging out:", error);
@@ -134,16 +128,6 @@ export const ExclusiveNavbar = () => {
             />
           </div>
           <div className="flex justify-center items-center gap-3">
-            {/* <div className="relative">
-              <img
-                src={WishList}
-                alt="w"
-                className="w-auto md:w-6 h-6 cursor-pointer"
-              />
-              <p className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/3 w-4 h-4 cursor-pointer text-center text-xs bg-[#DB4444] text-white rounded-full">
-                2
-              </p>
-            </div> */}
             <Link to={"/cart"}>
               {" "}
               <div className="relative">

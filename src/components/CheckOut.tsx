@@ -16,13 +16,11 @@ export const CheckOut = () => {
   const townCityRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
-
-
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleClick = () => {
-    if (isSubmitting) return; 
-    setIsSubmitting(true); 
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
     const isValid =
       firstNameRef.current?.value &&
@@ -33,21 +31,19 @@ export const CheckOut = () => {
 
     if (!isValid) {
       toast.error("Please fill in all required fields.");
-      setIsSubmitting(false); 
+      setIsSubmitting(false);
       return;
     }
 
-    
     toast.success("Hooray! Your order is on its way.");
 
-  
     if (firstNameRef.current) firstNameRef.current.value = "";
     if (streetAddressRef.current) streetAddressRef.current.value = "";
     if (townCityRef.current) townCityRef.current.value = "";
     if (phoneRef.current) phoneRef.current.value = "";
     if (emailRef.current) emailRef.current.value = "";
 
-    setIsSubmitting(false); 
+    setIsSubmitting(false);
   };
   return (
     <>
@@ -67,13 +63,11 @@ export const CheckOut = () => {
             <p>CheckOut</p>
           </div>
 
-      
           <div className="flex gap-9 md:flex-row flex-col my-9 justify-between w-full">
             <div className="flex flex-col gap-5 md:w-[50%] w-full">
               <h1 className="font-medium text-3xl">Billing Details</h1>
 
               <div className="flex flex-col w-full my-3 gap-6">
-              
                 <div className="flex flex-col gap-1">
                   <label htmlFor="firstName" className="text-gray-400">
                     First Name<span className="text-customRed">*</span>
@@ -199,7 +193,10 @@ export const CheckOut = () => {
                       Apply Coupon
                     </div>
                   </div>
-                  <div onClick={handleClick} className=" md:mt-7 mt-5 flex items-center justify-center cursor-pointer hover:bg-[#E07575] bg-customRed text-white rounded-sm w-[35vw] md:w-[211px] h-[56px]">
+                  <div
+                    onClick={handleClick}
+                    className=" md:mt-7 mt-5 flex items-center justify-center cursor-pointer hover:bg-[#E07575] bg-customRed text-white rounded-sm w-[35vw] md:w-[211px] h-[56px]"
+                  >
                     Place Order
                   </div>
                   <div></div>

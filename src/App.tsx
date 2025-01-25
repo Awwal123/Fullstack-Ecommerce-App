@@ -34,9 +34,7 @@ function App() {
               <Route
                 path="/home"
                 element={
-                  // <PrivateRoute>
                   <Exclusive />
-                  // </PrivateRoute>
                 }
               />
               <Route path="/cart" element={<Cart />} />

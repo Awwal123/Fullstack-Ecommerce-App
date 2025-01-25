@@ -42,7 +42,6 @@ export const Cart = () => {
                 className="flex justify-between bg-white md:px-8 py-2 mb-5 rounded-md px-2 w-full h-[102px] items-center  shadow-lg"
                 key={item.id}
               >
-                {/* Product Details */}
                 <div className="relative flex gap-4 md:w-[25%]">
                   <img
                     src={item.imgUrl}

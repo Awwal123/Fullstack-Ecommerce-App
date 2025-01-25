@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { db } from "./config/firebase"; 
 
-// Defines the structure of cart items
+
 interface CartItem {
   id: number;
   name: string;
@@ -18,7 +18,7 @@ interface CartItem {
   imgUrl: string;
 }
 
-// Defines the structure of wishlist items
+
 interface WishlistItem {
   id: number;
   name: string;
@@ -26,7 +26,6 @@ interface WishlistItem {
   imgUrl: string;
 }
 
-// Defines the data and functions the CartContext will provide
 interface CartContextProps {
   cartItems: CartItem[];
   wishlistItems: WishlistItem[];
@@ -37,9 +36,9 @@ interface CartContextProps {
   addToWishlist: (product: WishlistItem) => void;
   removeFromWishlist: (id: number) => void;
   total: number;
-  name: string;  // Added user name
-  email: string; // Added user email
-  setName: (name: string) => void;  // Added setName function
+  name: string; 
+  email: string;
+  setName: (name: string) => void;  
   setEmail: (email: string) => void; 
 }
 
@@ -48,7 +47,7 @@ const CartContext = createContext<CartContextProps | undefined>(undefined);
 export const CartProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const userId = localStorage.getItem("userUID"); // Retrieve user ID from localStorage or your auth context
+  const userId = localStorage.getItem("userUID"); 
 
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
     const savedCart = localStorage.getItem("cartItems");
@@ -63,7 +62,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
-  // Fetch cart items from Firestore on mount
+ 
   useEffect(() => {
     if (!userId) return;
 
@@ -85,7 +84,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     fetchCartFromFirestore();
   }, [userId]);
 
-  // Save cart items to Firestore and localStorage whenever they change
+  
   useEffect(() => {
     if (!userId) return;
 
@@ -95,7 +94,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         await setDoc(
           userDoc,
           { cart: cartItems },
-          { merge: true } // Merge with existing user document
+          { merge: true } 
         );
       } catch (error) {
         console.error("Error saving cart to Firestore:", error);
@@ -176,10 +175,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         addToWishlist,
         removeFromWishlist,
         total,
-        name,  // Provided name in context
-        email, // Provided email in context
-        setName,  // Provided setName in context
-        setEmail, // Provided setEmail in context
+        name,
+        email,
+        setName,  
+        setEmail, 
       }}
     >
       {children}

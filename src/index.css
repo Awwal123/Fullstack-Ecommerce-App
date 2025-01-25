@@ -49,7 +49,6 @@ body {
   }
   .slides {
     width: 500%;
-    /* height: 500px; */
     display: flex;
   }
   .slides input {

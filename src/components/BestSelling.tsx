@@ -102,7 +102,7 @@ export const BestSelling = () => {
     if (rating === 5) return five;
     if (rating === 4.5) return fourHalf;
     if (rating === 4) return four;
-    return ""; // Default empty path for other ratings
+    return "";
   };
   return (
     <div className="w-full px-5 pb-9 md:py-6 md:px-16 ">
