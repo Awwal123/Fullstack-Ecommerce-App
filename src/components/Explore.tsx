@@ -156,12 +156,6 @@ export const ExploreOurProduct = () => {
               to={`/product/${product.id}`}
               className="relative group cursor-pointer bg-gray-100 w-[190px] md:w-auto flex flex-col items-center rounded-t-md pt-3 md:h-[250px] h-[250px]"
             >
-              {/* <div className="px-3 flex w-full justify-between">
-                <div className="bg-[#DB4444] w-[55px] h-[26px] rounded-md text-xs flex items-center justify-center text-white">
-                  {product.discount}
-                </div>
-              </div> */}
-
               <div className="absolute top-3 right-3 flex flex-col gap-2">
                 <div className="flex justify-center w-8 h-8 rounded-full cursor-pointer items-center bg-white">
                   <img src={Favorite} alt="favorite" />
@@ -175,8 +169,6 @@ export const ExploreOurProduct = () => {
                   alt={product.imgUrl}
                 />
               </div>
-
-              {/* Add to Cart Button */}
               <button
                 className="absolute bottom-0 bg-black w-full py-2 rounded-b-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 onClick={(e) => {

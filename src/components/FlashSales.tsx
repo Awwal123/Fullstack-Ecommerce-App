@@ -1,6 +1,5 @@
 import Timer from "./Timer";
 import Favorite from "../assets/images/Favorite.png";
-// import Eye from "../assets/images/eye.png";
 import Pad from "../assets/images/WiredPad.png";
 import Keyboard from "../assets/images/WiredKeyboard.png";
 import Monitor from "../assets/images/GamingMonitor.png";
@@ -8,7 +7,6 @@ import Smart from "../assets/images/Smart.png";
 import Jacket from "../assets/images/Jacket.png";
 import Iron from "../assets/images/PressingIron.png";
 import Rolex from "../assets/images/GoldenRolex.png";
-// import Hoddy from "../assets/images/PinkHoddy.png";
 import Laptop from "../assets/images/GamingLaptop.png";
 import five from "../assets/images/FiveStar.png";
 import fourHalf from "../assets/images/FourHalfStar.png";
@@ -89,16 +87,6 @@ const products = [
     rating: 4,
     ratingCount: 60,
   },
-  // {
-  //   id: 8,
-  //   name: "The North Coat",
-  //   price: 260,
-  //   oldPrice: 360,
-  //   imgUrl: Hoddy,
-  //   discount: "-37%",
-  //   rating: 5,
-  //   ratingCount: 65,
-  // },
   {
     id: 109,
     name: "ASUS FHD Gaming Laptop",
@@ -117,7 +105,7 @@ export const FlashSale = () => {
     if (rating === 5) return five;
     if (rating === 4.5) return fourHalf;
     if (rating === 4) return four;
-    return ""; // Default empty path for other ratings
+    return ""; 
   };
 
   return (
@@ -170,8 +158,6 @@ export const FlashSale = () => {
                   alt={product.imgUrl}
                 />
               </div>
-
-              {/* Add to Cart Button */}
               <button
                 className="absolute bottom-0 bg-black w-full py-2 rounded-b-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 onClick={(e) => {
