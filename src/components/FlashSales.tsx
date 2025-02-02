@@ -196,7 +196,6 @@ export const FlashSale = () => {
         ))}
       </div>
       <Link to={"/shop"}>
-        {" "}
         <div className="mx-auto my-7 flex justify-center items-center rounded-md bg-[#DB4444] hover:bg-[#E07575] text-white text-center cursor-pointer  w-[243px] h-[56px]">
           View All Products
         </div>

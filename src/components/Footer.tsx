@@ -10,24 +10,6 @@ import Linkedin from "../assets/images/Linkedin.png";
 export const Footer = () => {
   return (
     <>
-      {/* <div className="w-full justify-between md:hidden  flex items-center  text-white px-5 py-8 bg-black">
-        <div className="flex justify-between">
-          <img src={FB} alt="f" className="w-6 h-6" />
-          <img src={X} alt="f" className="w-6 h-6" />
-          <img src={Ig} alt="f" className="w-6 h-6" />
-          <img src={Linkedin} alt="f" className="w-6 h-6" />
-        </div >
-        
-        
-        <div className="flex items-center gap-2 text-sm text-gray-500 "> 
-        <i className="fa-regular fa-copyright"></i>
-            <p>Copyright Rimel 2022. All right reserved</p>
-        </div>
-        <div>
-
-        </div>
-      </div> */}
-
       <div className="w-full mt-16 text-white px-5 py-3 hidden md:block md:px-16 md:h-auto md:py-10 bg-black">
         <div className="grid grid-cols-5 gap-4">
           <div className="flex flex-col gap-3">
@@ -36,18 +18,6 @@ export const Footer = () => {
             <p className="text-gray-400 text-base">
               Get 10% off your first order
             </p>
-            {/* <div className="relative inline-block">
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="border border-white w-auto h-11 bg-black px-2 rounded-sm text-gray-300 "
-              />
-              <img
-                src={Send}
-                alt="s"
-                className="absolute right-1/4 top-1/2 transform -translate-y-1/2 w-5 h-5"
-              />
-            </div> */}
           </div>
 
           <div className="flex flex-col gap-3">
