@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-// import "./index.css"
+
 
 interface TimerProps {
   duration: number;
 }
-
 const JamboxTimer: React.FC<TimerProps> = ({ duration }) => {
   const [time, setTime] = useState<number>(duration);
 
@@ -13,7 +12,7 @@ const JamboxTimer: React.FC<TimerProps> = ({ duration }) => {
       setTime((prevTime) => prevTime - 1000);
     }, 1000);
 
-    return () => clearTimeout(timerId); // Cleanup to avoid memory leaks
+    return () => clearTimeout(timerId); 
   }, [time]);
 
   const getFormattedTime = (

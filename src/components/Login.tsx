@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import { auth, googleProvider } from "./config/firebase";
-import { db } from "./config/firebase"; // Firestore configuration
+import { db } from "./config/firebase";
 import {
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -29,17 +29,15 @@ import { useState } from "react";
   export const Login = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const { setCartItems } = useCart(); // Update cart state
+    const { setCartItems } = useCart(); 
     const navigate = useNavigate();
-  
-    // Save user data to local storage
+
     const saveToLocalStorage = (user: User) => {
       localStorage.setItem("userUID", user.uid);
       localStorage.setItem("userEmail", user.email || "");
       localStorage.setItem("userName", user.displayName || "User");
     };
   
-    // Fetch cart items from Firestore
     const fetchUserCartFromFirestore = async (userUID: string) => {
       try {
         const cartCollection = collection(db, "carts");
@@ -57,7 +55,7 @@ import { useState } from "react";
           } as CartItem;
         });
   
-        setCartItems(cartItems); // Update cart context
+        setCartItems(cartItems); 
       } catch (err) {
         console.error("Error fetching cart from Firestore:", err);
         toast.error("Failed to fetch cart data. Please try again later.");
