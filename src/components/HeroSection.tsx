@@ -19,14 +19,11 @@ export const HeroSection = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
-
   const { setName: setContextName, setEmail: setContextEmail } = useCart(); 
-
   const saveToFirestore = async (uid: string, userData: object) => {
     try {
       const userDocRef = doc(db, "users", uid);
       const existingDoc = await getDoc(userDocRef);
-
       if (!existingDoc.exists()) {
         await setDoc(userDocRef, userData, { merge: true });
         console.log("User data saved to Firestore.");
@@ -38,21 +35,16 @@ export const HeroSection = () => {
       toast.error("Failed to save user data. Please try again.");
     }
   };
-
   const signIn = async () => {
     if (!name || !email || !password) {
       toast.error("Please fill in all the fields.");
       return;
     }
-
     try {
       const userCredential: UserCredential =
         await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
       console.log("User created:", user.email, "UID:", user.uid);
-    
-
       // Save to Firestore with default empty arrays for cart, orders, and wishlist
       await saveToFirestore(user.uid, {
         name,
@@ -61,10 +53,8 @@ export const HeroSection = () => {
         orders: [],
         wishlist: [],
       });
-
        setContextName(name);
       setContextEmail(email);
-
       localStorage.setItem("userUID", user.uid);
       console.log("Setting userUID in localStorage:", user.uid);
     
