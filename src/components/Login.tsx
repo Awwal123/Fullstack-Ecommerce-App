@@ -61,8 +61,7 @@ import { useState } from "react";
         toast.error("Failed to fetch cart data. Please try again later.");
       }
     };
-  
-    // Fetch user data from Firestore
+
     const fetchUserDataFromFirestore = async (userUID: string) => {
       try {
         const userDocRef = collection(db, "users");

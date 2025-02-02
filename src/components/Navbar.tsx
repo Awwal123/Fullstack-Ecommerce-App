@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation
+import { useLocation } from "react-router-dom"; 
 import Magnify from "../assets/images/Magnify.png";
 import Hamburger from "../assets/images/hamburger.png";
 import Closebtn from "../assets/images/CloseIcon.png";
 
 export const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const location = useLocation(); // Get the current location
+  const location = useLocation(); 
   const { pathname } = location;
 
   const toggleNavbar = () => {
