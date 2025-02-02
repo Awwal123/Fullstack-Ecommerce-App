@@ -19,7 +19,6 @@ export const Footer = () => {
               Get 10% off your first order
             </p>
           </div>
-
           <div className="flex flex-col gap-3">
             <h3 className="text-2xl font-bold">Support</h3>
             <p className="text-gray-400 text-base">
@@ -28,7 +27,6 @@ export const Footer = () => {
             <p className="text-gray-400 text-base">exclusive@gmail.com</p>
             <p className="text-gray-400 text-base">+88015-88888-9999</p>
           </div>
-
           <div className="flex flex-col gap-3">
             <h3 className="text-2xl font-bold">Account</h3>
             <p className="text-gray-400 text-base">My Account</p>
@@ -37,7 +35,6 @@ export const Footer = () => {
             <p className="text-gray-400 text-base">Wishlist</p>
             <p className="text-gray-400 text-base">Shop</p>
           </div>
-
           <div className="flex flex-col gap-3">
             <h3 className="text-2xl font-bold">Quick Link</h3>
             <p className="text-gray-400 text-base">Privacy Policy</p>
@@ -45,7 +42,6 @@ export const Footer = () => {
             <p className="text-gray-400 text-base">FAQ</p>
             <p className="text-gray-400 text-base">Contact</p>
           </div>
-
           <div className="flex flex-col gap-3">
             <h3 className="text-2xl font-bold">Download App</h3>
             <p className="text-gray-400 text-base">
