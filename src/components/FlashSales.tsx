@@ -201,7 +201,6 @@ export const FlashSale = () => {
           View All Products
         </div>
       </Link>
-
       <hr className="border my-9 md:mt-11" />
     </div>
   );
