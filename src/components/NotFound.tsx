@@ -19,7 +19,6 @@ export const Notfound = () => {
             Your visited page not found. You may go home page.
           </p>
           <Link to={"/home"}>
-            {" "}
             <div className="mx-auto my-7 flex justify-center items-center rounded-md bg-[#DB4444] hover:bg-[#E07575] text-white text-center cursor-pointer  w-[254px] h-[56px]">
               Back to home page
             </div>

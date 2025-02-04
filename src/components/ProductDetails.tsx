@@ -2,7 +2,6 @@ import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import four from "../assets/images/FourStar.png";
 import Delivery from "../assets/images/delivery.png";
 import Returns from "../assets/images/return.png";
-// import Sneaker from "../assets/images/MenFahsionShoe.png";
 import Pad from "../assets/images/WiredPad.png";
 import Keyboard from "../assets/images/WiredKeyboard.png";
 import Monitor from "../assets/images/GamingMonitor.png";
