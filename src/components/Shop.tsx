@@ -412,7 +412,6 @@ const products = [
     rating: 4.5,
     ratingCount: 200,
   },
-
   {
     id: 161,
     name: "Midnight Whisper",
@@ -463,7 +462,6 @@ const products = [
     rating: 4.5,
     ratingCount: 250,
   },
-
   {
     id: 167,
     name: "Edifice Watch",
@@ -676,7 +674,6 @@ export const Shop = () => {
             className="w-[40vw] block md:hidden border border-black pl-2 rounded-md"
           />
         </div>
-
         <div className="hidden md:flex justify-between overflow-y-auto items-center md:items-start gap-6 md:flex-row grid-cols-1 sm:grid-cols-2 w-full my-7">
           {categories.map((category) => (
             <div
@@ -722,7 +719,6 @@ export const Shop = () => {
                     alt={product.imgUrl}
                   />
                 </div>
-
                 {/* Add to Cart Button */}
                 <button
                   className="absolute bottom-0 bg-black w-full py-2 rounded-b-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -741,15 +737,10 @@ export const Shop = () => {
                   Add To Cart
                 </button>
               </Link>
-
               <div className="flex flex-col gap-2 md:mt-8">
                 <h2 className="font-medium text-base">{product.name}</h2>
-
                 <div className="flex gap-3">
                   <p className="text-customRed">${product.price}</p>
-                  {/* <p className="text-gray-600 font-medium line-through">
-                  ${product.oldPrice}
-                </p> */}
                 </div>
                 <div className="flex gap-3">
                   <img src={getRatingImage(product.rating)} alt="" />
